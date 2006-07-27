@@ -48,7 +48,7 @@ Persons := [
      )
 ],
 
-Status := "dev",
+Status := "deposited",
 #CommunicatedBy := "",
 #AcceptDate := "",
 
