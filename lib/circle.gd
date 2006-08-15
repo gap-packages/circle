@@ -120,5 +120,12 @@ DeclareAttribute( "AdjointGroup", IsRing );
 
 #############################################################################
 ##
+#A  UnderlyingRing( <G> )
+##
+DeclareAttribute( "UnderlyingRing", IsGroup );
+
+
+#############################################################################
+##
 #E
 ##
