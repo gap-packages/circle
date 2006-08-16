@@ -11,8 +11,8 @@ SetPackageInfo( rec(
 
 PackageName := "Circle",
 Subtitle := "Adjoint groups of finite radical algebras",
-Version := "1.0",
-Date := "25/07/2006",
+Version := "1.1",
+Date := "16/08/2006",
 ArchiveURL := "http://homepages.vub.ac.be/~okonoval/circle/circle-1.0",
 ArchiveFormats := ".tar.gz .tar.bz2 -win.zip",
 

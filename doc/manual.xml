@@ -10,12 +10,16 @@
 <TitlePage>
   <Title>&Circle;</Title>
   <Subtitle>Adjoint groups of finite radical algebras</Subtitle>
-  <Version>Version 1.0</Version>
+  <Version>Version 1.1</Version>
 
   <Author>Alexander Konovalov
           <Email>konovalov@member.ams.org</Email>
 	  <Homepage>http://homepages.vub.ac.be/~okonoval/</Homepage>
           <Address>
+	    Department of Mathematics<Br/>
+    	    Zaporozhye National University<Br/>
+            Zaporozhye, 69063 Ukraine<Br/>
+	    Current address:<Br/>
             Department of Mathematics<Br/>
     	    Vrije Universiteit Brussel<Br/>
             Pleinlaan 2, Brussels<Br/>
@@ -32,7 +36,7 @@
           </Address>        
   </Author>
 
-  <Date>July 2006</Date>
+  <Date>August 2006</Date>
 
 <Abstract>
 
@@ -71,7 +75,7 @@ If you publish a result which was partially obtained with the usage of
 <P/>
 
 A. Konovalov, P. Soules. 
-<E>Circle --- Adjoint groups of associative rings, Version 1.0;</E> 2006 
+<E>Circle --- Adjoint groups of associative rings, Version 1.1;</E> 2006 
 (<URL>http://homepages.vub.ac.be/~okonoval/circle.htm</URL>).
 </Copyright>
   
