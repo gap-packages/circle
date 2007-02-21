@@ -223,9 +223,7 @@ fail
 
 <ManSection>
    <Oper Name="IsUnit" 
-         Arg="R x" />
-   <Oper Name="IsUnit" 
-         Arg="x" />      
+         Arg="[ R, ] x" />
 <Description>
 Let <A>x</A> be a circle object corresponding to an element of 
 the ring <A>R</A>. Then the operation <C>IsUnit</C> returns 
@@ -251,7 +249,7 @@ true
 
 <Alt Only="LaTeX">\pagebreak</Alt>
 
-In the second form the result will be returned with respect
+If the first argument is omitted, the result will be returned with respect
 to the default ring of the circle object <A>x</A>.
 
 <Example>
@@ -273,9 +271,7 @@ true
 
 <ManSection>
    <Oper Name="IsCircleUnit" 
-         Arg="R x" />
-   <Oper Name="IsCircleUnit" 
-         Arg="x" />         
+         Arg="[ R, ] x" />
 <Description>
 Let <A>x</A> be an element of the ring <A>R</A>. Then 
 <C>IsCircleUnit( R, x )</C> determines whether <A>x</A> is invertible
@@ -300,7 +296,7 @@ true
 ]]>
 </Example>
 
-In the second form the result will be returned with respect
+If the first argument is omitted, the result will be returned with respect
 to the default ring of <A>x</A>.
 
 <Example>
