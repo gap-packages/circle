@@ -348,7 +348,7 @@ method defined in <File>gap4r4/lib/grp.gi</File> and may be ignored.
 <P/>
 
 1. The set of generators of the returned group is not required 
-to be the minimal generating set.
+to be a generating set of minimal possible order.
 <P/>
 
 2. <C>AdjointGroup</C> is stored as an attribute of <A>R</A>, 

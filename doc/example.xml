@@ -72,9 +72,9 @@ gap> G := AdjointGroup( R );
 ]]>                                                                                                
 </Example>
 
-Now we can find the minimal generating set of <C>G</C> and 
-check that <C>G</C> it is 3-generated. To do this, first we 
-need to convert it to the isomorphic PcGroup:
+Now we can find the generating set of minimal possible order for 
+the group <C>G</C>, and check that <C>G</C> it is 3-generated. 
+To do this, first we need to convert it to the isomorphic PcGroup:
 
 <Example>                                                                                          
 <![CDATA[ 
