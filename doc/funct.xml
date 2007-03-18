@@ -423,8 +423,8 @@ gap> StructureDescription( G );
 ]]>
 </Example>
 
-If the ring <A>R</A> is not a radical algebra, but also is not a ring 
-with one, then &Circle; will use another approach. We will enumerate 
+If the ring <A>R</A> is not a radical algebra, 
+then &Circle; will use another approach. We will enumerate 
 all elements of the ring <A>R</A> and select those that are units with 
 respect to the circle multiplication.
 Then we will use a random approach similar to the case of the radical
@@ -460,7 +460,7 @@ gap> StructureDescription( G );
 
 <Alt Only="LaTeX">\pagebreak</Alt>
 
-If <A>R</A> has a unity <M>1</M>, then the set <M>1+R^{ad}</M>, 
+Note that if <A>R</A> has a unity <M>1</M>, then the set <M>1+R^{ad}</M>, 
 where <M>R^{ad}</M> is the adjoint semigroup of <A>R</A>, coincides
 with the multiplicative semigroup <M>R^{mult}</M> of <M>R</M>, and the map 
 <M> r \mapsto (1+r) </M> for <M>r</M> in <M>R</M> is an isomorphism 
@@ -495,13 +495,36 @@ gap> IdGroup( Units( FG ) );
 ]]>
 </Example>
 
-This is is why we did not implemented in &Circle;
-adjoint groups for associative rings with one. 
-If you will try to compute the adjoint group for
-such a ring, you will get an error message telling
-that you can investigate the unit group of the ring
-instead.
+Thus, dependently on the ring <C>R</C> in question, it might be possible 
+that you can compute much faster its unit group using <C>Units(R)</C> than
+its adjoint group using <C>AdjointGroup(R)</C>. This is why in an attempt
+of computation of the adjoint group of the ring with one a warning message
+will be displayed:
 <P/>
+
+<Example>
+<![CDATA[
+gap> AdjointGroup( GroupRing( GF(2), DihedralGroup(8) ) );
+
+WARNING: usage of AdjointGroup for associative ring <R> with one!!! 
+In this case the adjoint group is isomorphic to the unit group 
+Units(<R>), which possibly may be computed faster!!! 
+
+#I  default `IsGeneratorsOfMagmaWithInverses' method returns `true' for 
+[ CircleObject( (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f1*f2+(Z(2)^
+    0)*f1*f3 ) ]
+<group of size 128 with 4 generators>
+gap> AdjointGroup( Integers mod 11 );                  
+
+WARNING: usage of AdjointGroup for associative ring <R> with one!!! 
+In this case the adjoint group is isomorphic to the unit group 
+Units(<R>), which possibly may be computed faster!!! 
+
+#I  default `IsGeneratorsOfMagmaWithInverses' method returns `true' for 
+[ CircleObject( Z(11)^0 ) ]
+<group of size 10 with 1 generators>
+]]>
+</Example>
 
 If <A>R</A> is infinite, an error message will appear,
 telling that &Circle; does not provide methods to deal

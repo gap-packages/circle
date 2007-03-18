@@ -145,7 +145,7 @@ InstallMethod( InverseOp,
     if x = fail then
       return fail;
     else
-      return CircleObject( -1 * a![1] * x );
+      return CircleObject( -a![1] * x );
     fi;
     end );
 
@@ -245,53 +245,48 @@ InstallMethod(AdjointGroup,
       Error("The ring <R> is non-associative !!!");
     fi;
     
-    if IsRingWithOne(R) then
-    
-      Error("Adjoint groups for associative rings with one ",
-            "are not implemented !!! \n",
-            "Use the unit group Units( R ) ",
-            "which is isomorphic to the adjoint group !!!");
-    
-    else
-    
-      if IsAlgebra( R ) and R = RadicalOfAlgebra( R ) then
-        Info( InfoCircle, 1, "Circle : <R> is a radical algebra, all elements are circle units");
-        CircleUnits := R;
-      else
-        Info( InfoCircle, 1, "Circle : <R> is not a radical algebra, computing circle units ...");
-        CircleUnits := [ ];
-	for h in R do
-	  h1 := CircleObject( h )^-1;
-	  if h1 <> fail then
-	    if UnderlyingRingElement( h1 ) in R then
-	      Add( CircleUnits, h );
-	    fi;
-	  fi;
-        od;
-      fi;
-
-      Info( InfoCircle, 1, "Circle : searching generators for adjoint group ...");
-
-      repeat
-        h := Random( CircleUnits );
-      until h <> Zero( R );
-
-      G := Group( CircleObject( h ) );
-
-      while Size( G ) < Size( CircleUnits ) do
-        h := Random( CircleUnits );
-        if h <> Zero( R ) then
-          H := ClosureGroup( G, CircleObject( h ) );
-          if Size( G ) < Size( H ) then
-            G := H;
-          fi;
-	fi;
-      od;
-
-      SetUnderlyingRing( G, R );
-      return G;
-
+    if IsRingWithOne(R) then 
+      Print("\nWARNING: usage of AdjointGroup for associative ring <R> with one!!! \n",
+            "In this case the adjoint group is isomorphic to the unit group \n",
+            "Units(<R>), which possibly may be computed faster!!! \n\n");
     fi;
+    
+    if IsAlgebra( R ) and R = RadicalOfAlgebra( R ) then
+      Info( InfoCircle, 1, "Circle : <R> is a radical algebra, all elements are circle units");
+      CircleUnits := R;
+    else
+      Info( InfoCircle, 1, "Circle : <R> is not a radical algebra, computing circle units ...");
+      CircleUnits := [ ];
+      for h in R do
+        h1 := CircleObject( h )^-1;
+        if h1 <> fail then
+	      if UnderlyingRingElement( h1 ) in R then
+	        Add( CircleUnits, h );
+	      fi;
+	    fi;
+      od;
+    fi;
+
+    Info( InfoCircle, 1, "Circle : searching generators for adjoint group ...");
+
+    repeat
+      h := Random( CircleUnits );
+    until h <> Zero( R );
+
+    G := Group( CircleObject( h ) );
+
+    while Size( G ) < Size( CircleUnits ) do
+      h := Random( CircleUnits );
+      if h <> Zero( R ) then
+        H := ClosureGroup( G, CircleObject( h ) );
+        if Size( G ) < Size( H ) then
+          G := H;
+        fi;
+      fi;
+    od;
+
+    SetUnderlyingRing( G, R );
+    return G;
 
     end );
 
