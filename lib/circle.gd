@@ -115,6 +115,13 @@ DeclareOperation( "IsCircleUnit", [ IsRing, IsRingElement ] );
 ##
 #A  AdjointGroup( <R> )
 ##
+DeclareAttribute( "AdjointSemigroup", IsRing );
+
+
+#############################################################################
+##
+#A  AdjointGroup( <R> )
+##
 DeclareAttribute( "AdjointGroup", IsRing );
 
 
@@ -122,7 +129,7 @@ DeclareAttribute( "AdjointGroup", IsRing );
 ##
 #A  UnderlyingRing( <G> )
 ##
-DeclareAttribute( "UnderlyingRing", IsGroup );
+DeclareAttribute( "UnderlyingRing", IsSemigroup );
 
 
 #############################################################################

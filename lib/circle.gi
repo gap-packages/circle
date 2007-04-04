@@ -196,12 +196,54 @@ InstallOtherMethod( IsCircleUnit,
 
 #############################################################################
 ##
+#M  AdjointSemigroup( <R> )
+##
+##  Let R be an associative ring, not necessarily with a unit element. The 
+##  set of all elements of R forms a monoid with neutral element 0 from R 
+##  under the operation r * s = r + s + rs for all r and s of R. This monoid
+##  is called the adjoint semigroup of R and is denoted R^ad. 
+##
+InstallMethod(AdjointSemigroup,
+    "for a ring",
+    [ IsRing ],
+    function( R )
+
+    local S;
+
+    if not IsFinite( R ) then
+      Error("Adjoint semigroups for infinite rings are not implemented yet !!!");
+    fi;
+
+    if not IsAssociative( R ) then
+      # To enforce the associativity test for rings of the form 
+      # Ring( [ ZmodnZObj( 2, 8 ) ] );
+      Error("The ring <R> is non-associative !!!");
+    fi;
+    
+    if IsRingWithOne(R) then 
+      Print("\nWARNING: usage of AdjointSemigroup for associative ring <R> with one!!! \n",
+            "The adjoint semigroup is isomorphic to the multiplicative semigroup! \n\n");
+    fi;
+    
+    # Enumeration of R must be feasible to do this:
+    S := Monoid( List( R, CircleObject ) );
+    
+    SetIsFinite( S, IsFinite( R ) );
+    SetUnderlyingRing( S, R );
+
+    return S;
+
+    end );
+
+
+#############################################################################
+##
 #M  AdjointGroup( <R> )
 ##
 ##  Let R be an associative ring, not necessarily with a unit element. The 
 ##  set of all elements of R forms a monoid with neutral element 0 from R 
 ##  under the operation r * s = r + s + rs for all r and s of R. This monoid
-##  is calles the adjoint semigroup of R and is denoted R^ad. The group of 
+##  is called the adjoint semigroup of R and is denoted R^ad. The group of 
 ##  all invertible elements of this monoid is called the adjoint group of R 
 ##  and is denoted by R^*.
 ##
@@ -209,8 +251,8 @@ InstallOtherMethod( IsCircleUnit,
 ##  respect to the circle multiplication x*y = x + y + xy. Therefore
 ##  its adjoint group coincides with R elementwise. We use this condition
 ##  to determine whether the chosen set of generators is enough to generate
-##  the adjoint group. Note that the returned group not necessary has the
-##  minimal generating set.
+##  the adjoint group. Note that the set of generators of the returned 
+##  group is not required to be a generating set of minimal possible order.
 ##
 ##  (I tested also the loop over all elements of R instead of the random
 ##  selection. In my examples this was less efficient. But whether it is
@@ -222,10 +264,10 @@ InstallOtherMethod( IsCircleUnit,
 ##  R, which we denote U(R), and the map r -> 1+r with r in R is an 
 ##  isomorphism from R^* onto U(R).
 ##
-##  If R is neither radical algebra nor ring with unity, then we compute
-##  all circle units of R, and then form a group of circle units, using
-##  the approach similar to the case of a radical algebra (this will work
-##  only for rings for which enummeration of all elements is feasible)
+##  If R is not a radical, then we compute all circle units of R, and then 
+##  form a group of circle units, using the approach similar to the case of 
+##  a radical algebra (this will work only for rings for which enummeration 
+##  of all elements is feasible)
 ##
 InstallMethod(AdjointGroup,
     "for a ring",
@@ -235,16 +277,9 @@ InstallMethod(AdjointGroup,
     local CircleUnits, G, h, h1, H;
 
     if not IsFinite( R ) then
-      Error("Adjoint groups for infinite associative rings are ",
-            "not implemented yet !!!");
+      Error("Adjoint groups for infinite rings are not implemented yet !!!");
     fi;
 
-    if not IsAssociative( R ) then
-      # To enforce the associativity test for rings of the form 
-      # Ring( [ ZmodnZObj( 2, 8 ) ] );
-      Error("The ring <R> is non-associative !!!");
-    fi;
-    
     if IsRingWithOne(R) then 
       Print("\nWARNING: usage of AdjointGroup for associative ring <R> with one!!! \n",
             "In this case the adjoint group is isomorphic to the unit group \n",
