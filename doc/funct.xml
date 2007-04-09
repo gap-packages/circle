@@ -321,7 +321,29 @@ true
 <Alt Only="LaTeX">\pagebreak</Alt>
 
 <Section Label="CircleAdjointGroups">
-<Heading>Construction of the adjoint group</Heading>
+<Heading>Construction of the adjoint semigroup and adjoint group</Heading>
+
+<ManSection>
+   <Attr Name="AdjointSemigroup" 
+         Arg="R" />
+<Description>
+If <A>R</A> is a finite ring then <C>AdjointSemigroup(<A>R</A>)</C> will 
+return the monoid which is formed by all elements of <A>R</A> with
+respect to the circle multiplication.
+
+<Example>
+<![CDATA[
+gap> R:=Ring( [ ZmodnZObj(2,8) ] );
+<ring with 1 generators>
+gap> S:=AdjointSemigroup(R);
+<monoid with 4 generators>
+]]>
+</Example>
+
+</Description> 
+
+</ManSection>
+
 
 <ManSection>
    <Attr Name="AdjointGroup" 
@@ -392,8 +414,6 @@ gap> StructureDescription( G );
 ]]>
 </Example>
 
-<Alt Only="LaTeX">\pagebreak</Alt>
-
 In the following example we construct a non-commutative 
 3-dimensional radical algebra of order 8 over the field 
 of two elements, and demonstrate that its adjoint group 
@@ -457,8 +477,6 @@ gap> StructureDescription( G );
 "C64 x C2"
 ]]>
 </Example>
-
-<Alt Only="LaTeX">\pagebreak</Alt>
 
 Note that if <A>R</A> has a unity <M>1</M>, then the set <M>1+R^{ad}</M>, 
 where <M>R^{ad}</M> is the adjoint semigroup of <A>R</A>, coincides
@@ -535,7 +553,6 @@ with infinite rings.
   
 </Section>
 
-<Alt Only="LaTeX">\pagebreak</Alt>
 
 <!-- ######################################################### -->
 
