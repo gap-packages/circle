@@ -89,48 +89,6 @@ DeclareRepresentation( "IsPositionalObjectOneSlotRep",
 DeclareSynonym( "IsDefaultCircleObject",
     IsCircleObject and IsPositionalObjectOneSlotRep );
 
-#############################################################################
-##
-#A  IsUnit( <R>, <circle_obj> )
-##
-##  we declare separate method for IsUnit for circle objects because
-##  they are not ring elements for which this method is already declared
-##
-DeclareOperation( "IsUnit", [ IsRing, IsDefaultCircleObject ] );
-
-    
-#############################################################################
-##
-#A  IsCircleUnit( <obj> )
-##
-##  Let <obj> be an element of the ring R. Then `IsCircleUnit( <obj> )'
-##  determines whether it is invertible with respect to the circle
-##  multilpication x+y+xy. This is equivalent to the condition that 1+obj
-##  is a unit in R with respect to the ordinary multiplication.
-##
-DeclareOperation( "IsCircleUnit", [ IsRing, IsRingElement ] );
-
-
-#############################################################################
-##
-#A  AdjointGroup( <R> )
-##
-DeclareAttribute( "AdjointSemigroup", IsRing );
-
-
-#############################################################################
-##
-#A  AdjointGroup( <R> )
-##
-DeclareAttribute( "AdjointGroup", IsRing );
-
-
-#############################################################################
-##
-#A  UnderlyingRing( <G> )
-##
-DeclareAttribute( "UnderlyingRing", IsSemigroup );
-
 
 #############################################################################
 ##

@@ -9,3 +9,4 @@
 
 # read the actual code. 
 ReadPackage("circle/lib/circle.gi");
+ReadPackage("circle/lib/adjoint.gi");
