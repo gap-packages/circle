@@ -13,7 +13,7 @@ PackageName := "Circle",
 Subtitle := "Adjoint groups of finite radical algebras",
 Version := "1.2",
 Date := "12/04/2007",
-ArchiveURL := "http://www.cs.st-andrews.ac.uk/~alexk/circle/circle-1.1",
+ArchiveURL := "http://www.cs.st-andrews.ac.uk/~alexk/circle/circle-1.2",
 ArchiveFormats := ".tar.gz .tar.bz2 -win.zip",
 
 #TextFiles := ["init.g", ......],

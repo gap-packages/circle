@@ -8,7 +8,7 @@ To use the &Circle; package first you need to load it as follows:
 <![CDATA[
 gap> LoadPackage("circle");
 -----------------------------------------------------------------------------
-Loading  Circle 1.0 (Adjoint groups of associative rings)
+Loading  Circle 1.2 (Adjoint groups of associative rings)
 by Alexander Konovalov (http://www.cs.st-andrews.ac.uk/~alexk/) and
    Panagiotis Soules (psoules@math.uoa.gr).
 -----------------------------------------------------------------------------
