@@ -12,7 +12,7 @@
 ##  all invertible elements of this monoid is called the adjoint group of R
 ##  and is denoted by R^*.
 ##
-##  This file contains declarations for circle objects and adoint groups.
+##  This file contains declarations for circle objects.
 ##
 #############################################################################
 
@@ -43,6 +43,7 @@ DeclareCategory( "IsCircleObject", IsMultiplicativeElementWithInverse );
 
 DeclareCategoryCollections( "IsCircleObject" );
 
+
 #############################################################################
 ##
 #A  CircleFamily( <Fam> )
@@ -56,6 +57,17 @@ DeclareCategoryCollections( "IsCircleObject" );
 ##
 DeclareAttribute( "CircleFamily", IsFamily );
 
+
+#############################################################################
+##
+#R  IsPositionalObjectOneSlotRep( <obj> )
+##
+DeclareRepresentation( "IsPositionalObjectOneSlotRep",
+    IsPositionalObjectRep, [ 1 ] );
+
+DeclareSynonym( "IsDefaultCircleObject",
+    IsCircleObject and IsPositionalObjectOneSlotRep );
+    
 
 #############################################################################
 ##
@@ -77,17 +89,6 @@ DeclareAttribute( "CircleObject", IsRingElement );
 ##  is the corresponding ring element. 
 ##
 DeclareOperation("UnderlyingRingElement", [ IsCircleObject] );
-
-
-#############################################################################
-##
-#R  IsPositionalObjectOneSlotRep( <obj> )
-##
-DeclareRepresentation( "IsPositionalObjectOneSlotRep",
-    IsPositionalObjectRep, [ 1 ] );
-
-DeclareSynonym( "IsDefaultCircleObject",
-    IsCircleObject and IsPositionalObjectOneSlotRep );
 
 
 #############################################################################

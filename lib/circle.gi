@@ -5,7 +5,7 @@
 ##
 #H  $Id$
 ##
-##  This file contains an implementation of circle objects and adoint groups.
+##  This file contains an implementation of circle objects.
 ##
 #############################################################################
 
@@ -34,7 +34,7 @@ local F;
     SetCharacteristic( F, Characteristic( Fam ) );
   fi;
 
-  # store the type of objects in the image
+  # store the type of objects in the output
   F!.CircleType:= NewType( F, IsDefaultCircleObject );
 
   # Return the circle family
@@ -60,6 +60,18 @@ InstallMethod( CircleObject,
 
 #############################################################################
 ##
+#M  PrintObj( <obj> )
+##
+InstallMethod( PrintObj,
+    "for object in `IsCircleObject'",
+    [ IsDefaultCircleObject ],
+    function( obj )
+    Print( "CircleObject( ", obj![1], " )" );
+    end );
+
+
+#############################################################################
+##
 #O  UnderlyingRingElement( <obj> )
 ##
 ##  Let <obj> be a circle object. Then `UnderlyingRingElement( <obj> )' 
@@ -71,18 +83,6 @@ InstallMethod( UnderlyingRingElement,
     obj -> obj![1] );
 
                       
-#############################################################################
-##
-#M  PrintObj( <obj> )
-##
-InstallMethod( PrintObj,
-    "for object in `IsCircleObject'",
-    [ IsDefaultCircleObject ],
-    function( obj )
-    Print( "CircleObject( ", obj![1], " )" );
-    end );
-    
-
 #############################################################################
 ##
 #M  \=( <x>, <y> )  . .  . . . . . . . . . . . . . . . for two circle objects

@@ -12,7 +12,8 @@
 ##  all invertible elements of this monoid is called the adjoint group of R
 ##  and is denoted by R^*.
 ##
-##  This file contains declarations for adoint semigroups and adjoint groups.
+##  This file contains declarations related with 
+##  adoint semigroups and adjoint groups.
 ##
 #############################################################################
 

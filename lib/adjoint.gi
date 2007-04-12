@@ -5,8 +5,8 @@
 ##
 #H  $Id$
 ##
-##  This file contains an implementation 
-##  of adoint semigroups and adjoint groups.
+##  This file contains implementations related with 
+##  adoint semigroups and adjoint groups.
 ##
 #############################################################################
 
