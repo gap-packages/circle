@@ -17,6 +17,9 @@ gap>
 ]]>
 </Example>
 
+Note that if you entered examples from the previous chapter, you need
+to restart &GAP; before loading the &Circle; package.
+
 
 <Section Label="CircleObjects">
 <Heading>Circle objects</Heading>
@@ -38,12 +41,8 @@ corresponding to the family <C>fam</C>.
 
 <Example>
 <![CDATA[
-gap> x := 2;                                   
-2
-gap> a := CircleObject( x );
+gap> a := CircleObject( 2 );
 CircleObject( 2 )
-gap> FamilyObj( a ) = CircleFamily( FamilyObj( x ) ); 
-true
 ]]>
 </Example>
 
@@ -55,18 +54,13 @@ true
    <Oper Name="UnderlyingRingElement" 
          Arg="x" />
 <Description>	      
-Let <A>x</A> be a circle object. Then <C>UnderlyingRingElement(<A>x</A>)</C> 
-returns the corresponding ring element.
+Returns the corresponding ring element for the circle object <A>x</A>.
 <Example>
 <![CDATA[
-gap> x := 2;                                   
-2
-gap> a := CircleObject( x );
+gap> a := CircleObject( 2 );
 CircleObject( 2 )
 gap> UnderlyingRingElement( a );    
 2
-gap> FamilyObj( a ) = CircleFamily( FamilyObj( x ) ); 
-true
 ]]>
 </Example>
 
@@ -85,22 +79,21 @@ true
 An object <A>x</A> lies in the category <C>IsCircleObject</C> if and
 only if it lies in a family constructed by <Ref Attr="CircleFamily"/>. 
 Since circle objects can be multiplied via <C>*</C> with elements in 
-their family, and we want to implement operations <C>One</C> and 
-<C>Inverse</C> to deal with groups they generate, circle objects are
-implemented in the category <C>IsMultiplicativeElementWithInverse</C>. 
+their family, and we need operations <C>One</C> and <C>Inverse</C> to 
+deal with groups they generate, circle objects are implemented in the 
+category <C>IsMultiplicativeElementWithInverse</C>. A collection of 
+circle objects (e.g. adjoint semigroup or adjoint group) will lie in 
+the category <C>IsCircleObjectCollection</C>.
   
 <Example>
 <![CDATA[
-gap> IsCircleObject( 2 );             
+gap> IsCircleObject( 2 ); IsCircleObject( CircleObject( 2 ) );            
 false
-gap> IsCircleObject( CircleObject( 2 ) );
 true
 gap> IsMultiplicativeElementWithInverse( CircleObject( 2 ) );
 true
-gap> One( CircleObject( 2 ) );
-CircleObject( 0 )
-gap> CircleObject( -2 )^-1;
-CircleObject( -2 )
+gap> IsCircleObjectCollection( [ CircleObject(0), CircleObject(2) ] );
+true
 ]]>
 </Example>
 
@@ -143,16 +136,11 @@ correspondence with elements of the family <A>fam</A>,
 but with the circle multiplication as an infix multiplication.
 That is, for <M>x</M>, <M>y</M> in <A>fam</A>, the product of their images 
 in the <C>CircleFamily(fam)</C> will be the image of <M> x + y + x y </M>.
+The relation between these families is demonstrated by the following equality:
 
 <Example>
 <![CDATA[
-gap> x:=CircleObject(2)*CircleObject(3);                       
-CircleObject( 11 )
-gap> y:=CircleObject(2+3+2*3);
-CircleObject( 11 )
-gap> x=y;
-true
-gap> FamilyObj(x)=FamilyObj(y);                                                                 
+gap> FamilyObj( CircleObject ( 2 ) ) = CircleFamily( FamilyObj( 2 ) );
 true
 ]]>
 </Example>
@@ -166,7 +154,7 @@ true
 <Heading>Operations with circle objects</Heading>
  
 <ManSection>
-   <Oper Name="OneOp" 
+   <Oper Name="One" 
          Arg="x" />
 <Description>	      
 This operation returns the multiplicative neutral element 
@@ -188,7 +176,6 @@ CircleObject( [ [ 0, 0 ], [ 0, 0 ] ] )
 </Description>        
 </ManSection>
 
-<Alt Only="LaTeX">\pagebreak</Alt>
 
 <ManSection>
    <Oper Name="InverseOp" 
@@ -196,7 +183,11 @@ CircleObject( [ [ 0, 0 ], [ 0, 0 ] ] )
 <Description>	      
 For a circle object <A>x</A>, returns the multiplicative 
 inverse of <A>x</A> with respect to the circle multiplication; 
-if such one does not exist then <K>fail</K> is returned.
+if such one does not exist then <K>fail</K> is returned.<P/>
+
+In our implementation we assume that the underlying ring is a 
+subring of the ring with one, thus, if the circle inverse for 
+an element <M>x</M>exists, than it can be computed as <M>-x(1+x)^(-1)</M>.
 
 <Example>
 <![CDATA[
@@ -206,6 +197,11 @@ gap> CircleObject( 2 )^-1;
 CircleObject( -2/3 )
 gap> CircleObject( -2 )*CircleObject( -2 )^-1;
 CircleObject( 0 )
+]]>
+</Example>
+
+<Example>
+<![CDATA[
 gap> m := CircleObject( [ [ 1, 1 ], [ 0, 1 ] ] );   
 CircleObject( [ [ 1, 1 ], [ 0, 1 ] ] )
 gap> m^-1;    
@@ -240,14 +236,13 @@ gap> IsUnit( Rationals, CircleObject( 2 ) );
 true
 gap> IsUnit( ZmodnZ(8), CircleObject( ZmodnZObj(2,8) ) );
 true
-gap> m := CircleObject( [ [ 1, 1 ],[ 0, 1 ] ] );
-CircleObject( [ [ 1, 1 ], [ 0, 1 ] ] )
+gap> m := CircleObject( [ [ 1, 1 ],[ 0, 1 ] ] );;
 gap> IsUnit( FullMatrixAlgebra( Rationals, 2 ), m );
 true
 ]]>
 </Example>
 
-<Alt Only="LaTeX">\pagebreak</Alt>
+
 
 If the first argument is omitted, the result will be returned with respect
 to the default ring of the circle object <A>x</A>.
@@ -318,8 +313,6 @@ true
 </Section>
 
 
-<Alt Only="LaTeX">\pagebreak</Alt>
-
 <Section Label="CircleAdjointGroups">
 <Heading>Construction of the adjoint semigroup and adjoint group</Heading>
 
@@ -330,6 +323,11 @@ true
 If <A>R</A> is a finite ring then <C>AdjointSemigroup(<A>R</A>)</C> will 
 return the monoid which is formed by all elements of <A>R</A> with
 respect to the circle multiplication.
+<P/>
+
+The implementation is rather straightforward and was added to provide a 
+link to the &GAP; functionality for semigroups. It assumes that the
+enumaration of all elements of the ring <A>R</A> is feasible.
 
 <Example>
 <![CDATA[
@@ -418,6 +416,8 @@ In the following example we construct a non-commutative
 3-dimensional radical algebra of order 8 over the field 
 of two elements, and demonstrate that its adjoint group 
 is the dihedral group of order 8:
+
+<Alt Only="LaTeX">\pagebreak</Alt>
 
 <Example>
 <![CDATA[

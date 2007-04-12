@@ -41,7 +41,7 @@ The &GAP;4 package &Circle; extends the &GAP; functionality
 for computations in adjoint groups of associative rings.
 It provides functionality to construct circle objects that will 
 respect the circle multiplication <M> r \cdot s = r + s + rs </M>, 
-and compute adjoint semigroups and adjoint groups of finite rings.
+and to compute adjoint semigroups and adjoint groups of finite rings.
 <P/>
 
 </Abstract>
@@ -84,6 +84,7 @@ We acknowledge very much Alexander Hulpke for helpful comments and advise.
 
 <Body>
 <#Include SYSTEM "intro.xml">
+<#Include SYSTEM "objects.xml">
 <#Include SYSTEM "funct.xml">
 <#Include SYSTEM "example.xml">
 </Body>
