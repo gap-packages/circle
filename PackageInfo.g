@@ -12,7 +12,7 @@ SetPackageInfo( rec(
 PackageName := "Circle",
 Subtitle := "Adjoint groups of finite radical algebras",
 Version := "1.2",
-Date := "09/04/2007",
+Date := "12/04/2007",
 ArchiveURL := "http://www.cs.st-andrews.ac.uk/~alexk/circle/circle-1.1",
 ArchiveFormats := ".tar.gz .tar.bz2 -win.zip",
 
