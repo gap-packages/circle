@@ -13,7 +13,7 @@ PackageName := "Circle",
 Subtitle := "Adjoint groups of finite rings",
 Version := "1.3",
 Date := "27/12/2007",
-ArchiveURL := "http://www.cs.st-andrews.ac.uk/~alexk/circle/circle-1.2",
+ArchiveURL := "http://www.cs.st-andrews.ac.uk/~alexk/circle/circle-1.3",
 ArchiveFormats := ".tar.gz .tar.bz2 -win.zip",
 
 #TextFiles := ["init.g", ......],
