@@ -11,9 +11,9 @@ SetPackageInfo( rec(
 
 PackageName := "Circle",
 Subtitle := "Adjoint groups of finite rings",
-Version := "1.3",
-Date := "27/12/2007",
-ArchiveURL := "http://www.cs.st-andrews.ac.uk/~alexk/circle/circle-1.3",
+Version := "1.3.1",
+Date := "17/01/2008",
+ArchiveURL := "http://www.cs.st-andrews.ac.uk/~alexk/circle/circle-1.3.1",
 ArchiveFormats := ".tar.gz .tar.bz2 -win.zip",
 
 #TextFiles := ["init.g", ......],
@@ -49,9 +49,9 @@ Persons := [
      )
 ],
 
-Status := "deposited",
-#CommunicatedBy := "",
-#AcceptDate := "",
+Status := "accepted",
+CommunicatedBy := "Leonard Soicher (QMUL)",
+AcceptDate := "01/2008",
 
 README_URL := "http://www.cs.st-andrews.ac.uk/~alexk/circle/README.circle",
 PackageInfoURL := "http://www.cs.st-andrews.ac.uk/~alexk/circle/PackageInfo.g",
