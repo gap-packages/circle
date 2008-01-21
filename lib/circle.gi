@@ -79,7 +79,7 @@ InstallMethod( PrintObj,
 ##
 InstallMethod( UnderlyingRingElement,
     "for a circle object", 
-    [ IsCircleObject],
+    [ IsCircleObject ],
     obj -> obj![1] );
 
                       
@@ -130,6 +130,24 @@ InstallMethod( OneOp,
     "for an object in `IsCircleObject'",
     [ IsDefaultCircleObject ],
     a -> CircleObject( Zero( a![1] ) ) );
+
+
+#############################################################################
+##
+#M  IsGeneratorsOfMagmaWithInverses( <elms> ) a collection of magma by 
+##   multiplication table elements will always be acceptable
+##   as generators, provided each one individually has an inverse.    
+##    
+
+InstallMethod( IsGeneratorsOfMagmaWithInverses, 
+        "for a collection of circle objects",
+        [ IsCollection ],
+        function(c)
+    if ForAll(c, x-> IsDefaultCircleObject(x) and IsMultiplicativeElementWithInverse(x)) then
+        return true;
+    fi;
+    TryNextMethod();
+end);
 
 
 #############################################################################
