@@ -102,7 +102,7 @@ the adjoint group is 4-generated:
 gap> R := Algebra( GF(2), One(GF(2))*[x,y] );
 <algebra over GF(2), with 2 generators>
 gap> G := AdjointGroup( R );                   
-<group of size 64 with 4 generators>
+<group of size 64 with 5 generators>
 gap> H := Image( IsomorphismPcGroup( G ) );
 Group([ f1, f2, f3, f4, f5, f6 ])
 gap> Length( MinimalGeneratingSet( H ) );

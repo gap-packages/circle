@@ -493,24 +493,23 @@ some time which may vary dependently on the particular ring in question, and
 will also display a lot of warnings about the default 
 <C>IsGeneratorsOfMagmaWithInverses</C> method, so we did not implemented 
 this as as standard method. In the following example the method based on
-Green's <M>H</M>-class is about 50 times slower than an application of
-earlier described random approach:
+Green's <M>H</M>-class is much slower than an application of
+earlier described random approach (20s vs 10ms):
 
-<Log>
+<Example>
 <![CDATA[
-gap> R := Ring( [ ZmodnZObj(2,1024) ] );   
+gap> R := Ring( [ ZmodnZObj(2,256) ] );   
 <ring with 1 generators>
-gap> AdjointGroup(R); time;
-<group of size 512 with 3 generators>
-109
-gap> R := Ring( [ ZmodnZObj(2,1024) ] );
+gap> AdjointGroup(R);
+<group of size 128 with 2 generators>
+gap> R := Ring( [ ZmodnZObj(2,256) ] );
 <ring with 1 generators>
-gap> S:=AdjointSemigroup(R); AsGroup(GreensHClassOfElement(S,One(S))); time;
-<monoid with 512 generators>
-<group of size 512 with 3 generators>
-5474
+gap> S:=AdjointSemigroup(R); 
+<monoid with 128 generators>
+gap> AsGroup(GreensHClassOfElement(S,One(S))); 
+<group of size 128 with 2 generators>
 ]]>
-</Log>
+</Example>
   
 
 Finally, note that if <A>R</A> has a unity <M>1</M>, then the set <M>1+R^{ad}</M>, 
@@ -537,7 +536,7 @@ gap> R := AugmentationIdeal( FG );
 <two-sided ideal in <algebra-with-one over GF(2), with 3 generators>, 
   (dimension 7)>
 gap> G := AdjointGroup( R );
-<group of size 128 with 3 generators>
+<group of size 128 with 4 generators>
 gap> IdGroup( G );
 [ 128, 170 ]
 gap> IdGroup( Units( FG ) );
@@ -561,14 +560,14 @@ WARNING: usage of AdjointGroup for associative ring <R> with one!!!
 In this case the adjoint group is isomorphic to the unit group 
 Units(<R>), which possibly may be computed faster!!! 
 
-<group of size 128 with 4 generators>
+<group of size 128 with 3 generators>
 gap> AdjointGroup( Integers mod 11 );                  
 
 WARNING: usage of AdjointGroup for associative ring <R> with one!!! 
 In this case the adjoint group is isomorphic to the unit group 
 Units(<R>), which possibly may be computed faster!!! 
 
-<group of size 10 with 2 generators>
+<group of size 10 with 1 generators>
 ]]>
 </Example>
 
