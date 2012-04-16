@@ -3,9 +3,9 @@ LoadPackage("circle");
 dir := DirectoriesPackageLibrary("circle","tst");
 
 testsfiles := [ 
-"circle02.tst",
 "circle03.tst",
 "circle04.tst",
+"circle02.tst"
 ];
 
 Print("=================================================================\n");
