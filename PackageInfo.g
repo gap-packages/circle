@@ -3,8 +3,6 @@
 #W  PackageInfo.g           The CIRCLE package            Alexander Konovalov
 ##                                                          Panagiotis Soules
 ##
-#H  $Id$
-##
 #############################################################################
 
 SetPackageInfo( rec(

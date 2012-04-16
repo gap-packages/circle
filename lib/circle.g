@@ -3,8 +3,6 @@
 #W  circle.g                The CIRCLE package            Alexander Konovalov
 ##                                                          Panagiotis Soules
 ##
-#H  $Id$
-##
 ##  This file contains service functions to build the documentation
 ##
 #############################################################################

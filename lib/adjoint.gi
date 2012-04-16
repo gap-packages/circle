@@ -3,8 +3,6 @@
 #W  adjoint.gi              The CIRCLE package            Alexander Konovalov
 ##                                                          Panagiotis Soules
 ##
-#H  $Id$
-##
 ##  This file contains implementations related with 
 ##  adoint semigroups and adjoint groups.
 ##

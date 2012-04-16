@@ -3,8 +3,6 @@
 #W  init.g                  The CIRCLE package            Alexander Konovalov
 ##                                                          Panagiotis Soules
 ##
-#H  $Id$
-##
 #############################################################################
 
 # read the function declarations

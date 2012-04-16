@@ -3,8 +3,6 @@
 #W  adjoint.gd              The CIRCLE package            Alexander Konovalov
 ##                                                          Panagiotis Soules
 ##
-#H  $Id$
-##
 ##  Let R be an associative ring, not necessarily with a unit element. The
 ##  set of all elements of R forms a monoid with neutral element 0 from R
 ##  under the operation r * s = r + s + rs for all r and s of R. This monoid
