@@ -84,33 +84,22 @@ Relevant details are explained in the next chapter of the manual.
 <Heading>Installation and system requirements</Heading>
 
 &Circle; does not use external binaries and, therefore, works without
-restrictions on the type of the operating system. It is designed for 
-&GAP;4.4 and no compatibility with previous releases of &GAP;4 is 
-guaranteed. 
+restrictions on the type of the operating system. This version of the
+package is designed for &GAP;4.5 and no compatibility with previous 
+releases of &GAP;4 is guaranteed. 
 <P/>
 
 To use the &Circle; online help it is necessary to install the &GAP;4 package 
-&GAPDoc; by Frank L\"ubeck and Max Neunh\"offer, which is available from the 
-&GAP; site or from 
-<URL>http://www.math.rwth-aachen.de/&tilde;Frank.Luebeck/GAPDoc/</URL>.
+&GAPDoc; by Frank Lübeck and Max Neunhöffer, which is available from the 
+&GAP; site or from <URL>http://www.math.rwth-aachen.de/&tilde;Frank.Luebeck/GAPDoc/</URL>.
 <P/> 
 
 &Circle; is distributed in standard formats
-(<File>zoo</File>, <File>tar.gz</File>, <File>tar.bz2</File>, 
-<File>-win.zip</File>) and can be obtained from 
-<URL>http://www.cs.st-andrews.ac.uk/&tilde;alexk/circle.htm</URL>.
-To unpack the archive <File>circle-1.3.1.zoo</File> you need the program 
-<File>unzoo</File>, which can be obtained from the &GAP; homepage 
-<URL>http://www.gap-system.org/</URL> (see section `Distribution').
-To install &Circle;, copy this archive into the <File>pkg</File> subdirectory of your 
-&GAP;4.4 installation. The subdirectory <File>circle</File> will be created in 
-the <File>pkg</File> directory after the following command:
-<P/>
-  <C>unzoo -x circle-1.3.1.zoo</C>
-<P/>
-
-Installation using other archive formats is performed in a similar way.
-
+(<File>tar.gz</File>, <File>tar.bz2</File>, <File>zip</File> and <File>-win.zip</File>) 
+and can be obtained from <URL>http://www.cs.st-andrews.ac.uk/&tilde;alexk/circle/</URL>
+or from the &GAP; homepage.
+To install the package, unpack its archive in the <File>pkg</File> subdirectory of your 
+&GAP; installation.
 </Section>
 
 </Chapter>

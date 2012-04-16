@@ -3,8 +3,9 @@
 
 In this chapter we explain how the &GAP; system may be extended
 with new objects using the circle multiplication as an example.
-We follow the guidelines given in the last two chapters of 
-the &GAP; Programming Tutorial and refer to them for more details.
+We follow the guidelines given in the &GAP; Reference Manual 
+(see <Ref Chap="Creating New Objects" BookName="ref"/> and subsequent 
+chapters), to which we refer for more details.
 
 <Section Label="ObjectsFirst">
 <Heading>First attempts</Heading>
@@ -395,9 +396,11 @@ gap> AsList(G);
 </Example>
 
 The &GAP; code used in this Chapter, is contained in the files
-<File>circle/lib/circle.gd</File> and <File>circle/lib/circle.gi</File>.
-We also refer to last two chapters of the &GAP; Programming Tutorial 
-for another examples of implementing new &GAP; objects and further details.
+<File>circle/lib/circle.gd</File> and <File>circle/lib/circle.gi</File>
+(without <C>My</C> in identifiers).
+For more examples of implementing new &GAP; objects and further details
+see <Ref Chap="Creating New Objects" BookName="ref"/> and subsequent 
+chapters in the &GAP; Reference Manual.
 
 </Section>
 

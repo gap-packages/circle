@@ -13,7 +13,7 @@
   <Version>Version &VERSION;</Version>
 
   <Author>Alexander Konovalov
-          <Email>konovalov@member.ams.org</Email>
+          <Email>alexk@mcs.st-andrews.ac.uk</Email>
 	      <Homepage>http://www.cs.st-andrews.ac.uk/&tilde;alexk/</Homepage>
           <Address>
             School of Computer Science<Br/>
@@ -42,6 +42,8 @@ for computations in adjoint groups of associative rings.
 It provides functionality to construct circle objects that will 
 respect the circle multiplication <M> r \cdot s = r + s + rs </M>, 
 and to compute adjoint semigroups and adjoint groups of finite rings.
+Also it may serve as an example of extending the &GAP; system with 
+new multiplicative objects. 
 <P/>
 
 </Abstract>
