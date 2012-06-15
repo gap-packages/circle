@@ -26,6 +26,7 @@
 +PackageInfo.g
 +read.g
 +README
++GPL
 # directory 'doc'
 +doc/*
 # directory 'lib'
