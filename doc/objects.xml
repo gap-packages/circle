@@ -256,7 +256,7 @@ in the following operation:
 
 <Example>
 <![CDATA[
-gap> DeclareOperation("UnderlyingRingElement", [ IsMyCircleObject] );
+gap> DeclareAttribute("UnderlyingRingElement", IsMyCircleObject );
 gap> InstallMethod( UnderlyingRingElement,
 >     "for a circle object", 
 >     [ IsMyCircleObject],

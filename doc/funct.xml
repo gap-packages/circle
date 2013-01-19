@@ -50,7 +50,7 @@ CircleObject( 2 )
 
 
 <ManSection>
-   <Oper Name="UnderlyingRingElement" 
+   <Attr Name="UnderlyingRingElement" 
          Arg="x" />
 <Description>	      
 Returns the corresponding ring element for the circle object <A>x</A>.

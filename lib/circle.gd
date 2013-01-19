@@ -86,7 +86,7 @@ DeclareAttribute( "CircleObject", IsRingElement );
 ##  Let <obj> be a circle object. Then `UnderlyingRingElement( <obj> )' 
 ##  is the corresponding ring element. 
 ##
-DeclareOperation("UnderlyingRingElement", [ IsCircleObject] );
+DeclareAttribute("UnderlyingRingElement", IsCircleObject );
 
 
 #############################################################################
