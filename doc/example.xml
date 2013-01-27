@@ -54,8 +54,9 @@ Then we compute the adjoint group of <C>R</C>:
  
 <Example>
 <![CDATA[
-gap> G := AdjointGroup( R );
-<group of size 15625 with 3 generators>
+gap> G := AdjointGroup( R );;
+gap> Size(G);
+15625
 ]]>
 </Example>
 
@@ -101,8 +102,9 @@ the adjoint group is 4-generated:
 <![CDATA[
 gap> R := Algebra( GF(2), One(GF(2))*[x,y] );
 <algebra over GF(2), with 2 generators>
-gap> G := AdjointGroup( R );                   
-<group of size 64 with 5 generators>
+gap> G := AdjointGroup( R );;
+gap> Size(G);
+64
 gap> H := Image( IsomorphismPcGroup( G ) );
 Group([ f1, f2, f3, f4, f5, f6 ])
 gap> Length( MinimalGeneratingSet( H ) );

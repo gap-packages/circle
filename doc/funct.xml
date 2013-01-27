@@ -399,8 +399,7 @@ gap> RadicalOfAlgebra( R ) = R;
 true
 gap> Dimension(R);
 2
-gap> G := AdjointGroup( R );    
-<group of size 4 with 1 generators>
+gap> G := AdjointGroup( R );;
 gap> Size( R ) = Size( G );
 true
 gap> StructureDescription( G );
@@ -460,8 +459,7 @@ gap> StructureDescription( G );
 "C2 x C2"
 gap> R := Ring( [ ZmodnZObj(2,256) ] );   
 <ring with 1 generators>
-gap> G := AdjointGroup( R );
-<group of size 128 with 4 generators>
+gap> G := AdjointGroup( R );;
 gap> StructureDescription( G );
 "C64 x C2"
 ]]>
@@ -500,8 +498,7 @@ earlier described random approach (20s vs 10ms):
 <![CDATA[
 gap> R := Ring( [ ZmodnZObj(2,256) ] );   
 <ring with 1 generators>
-gap> AdjointGroup(R);
-<group of size 128 with 2 generators>
+gap> AdjointGroup(R);;
 gap> R := Ring( [ ZmodnZObj(2,256) ] );
 <ring with 1 generators>
 gap> S:=AdjointSemigroup(R); 
@@ -532,11 +529,8 @@ We demonstrate this isomorphism using the following example.
 <![CDATA[
 gap> FG := GroupRing( GF(2), DihedralGroup(8) );
 <algebra-with-one over GF(2), with 3 generators>
-gap> R := AugmentationIdeal( FG );
-<two-sided ideal in <algebra-with-one over GF(2), with 3 generators>, 
-  (dimension 7)>
-gap> G := AdjointGroup( R );
-<group of size 128 with 4 generators>
+gap> R := AugmentationIdeal( FG );;
+gap> G := AdjointGroup( R );;
 gap> IdGroup( G );
 [ 128, 170 ]
 gap> IdGroup( Units( FG ) );
@@ -554,20 +548,20 @@ will be displayed:
 
 <Example>
 <![CDATA[
-gap> AdjointGroup( GroupRing( GF(2), DihedralGroup(8) ) );
+gap> Size( AdjointGroup( GroupRing( GF(2), DihedralGroup(8) ) ) );
 
 WARNING: usage of AdjointGroup for associative ring <R> with one!!! 
 In this case the adjoint group is isomorphic to the unit group 
 Units(<R>), which possibly may be computed faster!!! 
 
-<group of size 128 with 3 generators>
-gap> AdjointGroup( Integers mod 11 );                  
+128
+gap> Size( AdjointGroup( Integers mod 11 ) );                  
 
 WARNING: usage of AdjointGroup for associative ring <R> with one!!! 
 In this case the adjoint group is isomorphic to the unit group 
 Units(<R>), which possibly may be computed faster!!! 
 
-<group of size 10 with 1 generators>
+10
 ]]>
 </Example>
 
