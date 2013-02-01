@@ -527,6 +527,8 @@ We demonstrate this isomorphism using the following example.
 
 <Example>
 <![CDATA[
+gap> LoadPackage( "laguna", false );
+true
 gap> FG := GroupRing( GF(2), DihedralGroup(8) );
 <algebra-with-one over GF(2), with 3 generators>
 gap> R := AugmentationIdeal( FG );;
