@@ -1,8 +1,11 @@
 #!/bin/sh
 #############################################################################
 
+# disable special creation/extraction of ._* files by tar, etc. on Mac OS X
+COPYFILE_DISABLE=1; export COPYFILE_DISABLE
+
 export PKGNAME="circle"
-export PKGVERSION="1.5.2"
+export PKGVERSION="1.5.3"
 export TOOLPATH="/Users/alexk/HGREPS/gap/dev/DistributionUpdate/dist45"
 
 cp ${TOOLPATH}/classifyfiles.py ../
@@ -54,12 +57,12 @@ echo
 
 if [ $ANSWER = "y" ]; then
 echo "Ok, I'll publish the data ..."
-scp -p $PKGNAME-$PKGVERSION.tar.gz alexk@shell.cs.st-and.ac.uk:~/public_html/$PKGNAME/
+scp -p $PKGNAME-$PKGVERSION.tar.gz alexk@alexk.host.cs.st-andrews.ac.uk:~/public_html/$PKGNAME/
 cd $PKGNAME
-scp -p PackageInfo.g alexk@shell.cs.st-and.ac.uk:~/public_html/$PKGNAME/
-scp -p README alexk@shell.cs.st-and.ac.uk:~/public_html/$PKGNAME/ 
+scp -p PackageInfo.g alexk@alexk.host.cs.st-andrews.ac.uk:~/public_html/$PKGNAME/
+scp -p README alexk@alexk.host.cs.st-andrews.ac.uk:~/public_html/$PKGNAME/ 
 cd doc
-scp -p * alexk@shell.cs.st-and.ac.uk:~/public_html/$PKGNAME/doc   
+scp -p * alexk@alexk.host.cs.st-andrews.ac.uk:~/public_html/$PKGNAME/doc   
 else
   echo "Don't publish, bye."
 fi
