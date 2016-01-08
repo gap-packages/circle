@@ -478,7 +478,7 @@ gap> R := Ring( [ ZmodnZObj(2,256) ] );
 gap> S := AdjointSemigroup( R );
 <monoid with 128 generators>
 gap> H := GreensHClassOfElement(S,One(S));
-{CircleObject( ZmodnZObj( 0, 256 ) )}
+<Green's H-class: <object>>
 gap> G:=AsGroup(H);
 <group of size 128 with 2 generators>
 gap> StructureDescription(G);
