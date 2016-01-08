@@ -9,12 +9,12 @@ SetPackageInfo( rec(
 
 PackageName := "Circle",
 Subtitle := "Adjoint groups of finite rings",
-Version := "1.5.3",
-Date := "13/02/2015",
+Version := "1.5.4",
+Date := "08/01/2016",
 ##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "1.5.3">
-##  <!ENTITY RELEASEDATE "13 February 2015">
-##  <!ENTITY RELEASEYEAR "2015">
+##  <!ENTITY VERSION "1.5.4">
+##  <!ENTITY RELEASEDATE "8 January 2016">
+##  <!ENTITY RELEASEYEAR "2016">
 ##  <#/GAPDoc>
 
 PackageWWWHome := "http://www.cs.st-andrews.ac.uk/~alexk/circle/",
@@ -29,7 +29,7 @@ Persons := [
     IsAuthor      := true,
     IsMaintainer  := true,
     Email         := "alexk@mcs.st-andrews.ac.uk",
-    WWWHome       := "http://www.cs.st-andrews.ac.uk/~alexk/",
+    WWWHome       := "http://blogs.cs.st-andrews.ac.uk/alexk/",
     PostalAddress := Concatenation( [
                      "School of Computer Science\n",
                      "University of St Andrews\n",
@@ -74,7 +74,7 @@ PackageDoc := rec(
 ),
 
 Dependencies := rec(
-  GAP := ">=4.5",
+  GAP := ">=4.8",
   NeededOtherPackages := [ ["GAPDoc", ">= 1.5.1"] ],
   SuggestedOtherPackages := [],
   ExternalConditions := []
