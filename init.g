@@ -6,5 +6,5 @@
 #############################################################################
 
 # read the function declarations
-ReadPackage("circle/lib/circle.gd");
-ReadPackage("circle/lib/adjoint.gd");
+ReadPackage("circle", "lib/circle.gd");
+ReadPackage("circle", "lib/adjoint.gd");
