@@ -1,0 +1,22 @@
+  
+  
+  [1XIndex[101X
+  
+  [2XAdjointGroup[102X  3.3-2
+  [2XAdjointSemigroup[102X  3.3-1
+  [5XCircle[105X package  .-1
+  [2XCircleFamily[102X  3.1-5
+  [2XCircleObject[102X  3.1-1
+  [2XInfoCircle[102X  3.4-1
+  [2XInverseOp[102X  3.2-2
+  [2XIsCircleObject[102X  3.1-3
+  [2XIsCircleObjectCollection[102X  3.1-3
+  [2XIsCircleUnit[102X  3.2-4
+  [2XIsDefaultCircleObject[102X  3.1-4
+  [2XIsPositionalObjectOneSlotRep[102X  3.1-4
+  [2XIsUnit[102X  3.2-3
+  [2XOne[102X  3.2-1
+  [2XUnderlyingRingElement[102X  3.1-2
+  
+  
+  -------------------------------------------------------
