@@ -35,7 +35,7 @@
 
 <h3>2 <span class="Heading">Implementing circle objects</span></h3>
 
-<p>In this chapter we explain how the <strong class="pkg">GAP</strong> system may be extended with new objects using the circle multiplication as an example. We follow the guidelines given in the <strong class="pkg">GAP</strong> Reference Manual (see <a href="https://www.gap-system.org/Manuals/doc/ref/chap79.html#X83548994805AD1C9"><span class="RefLink">Reference: Creating New Objects</span></a> and subsequent chapters), to which we refer for more details.</p>
+<p>In this chapter we explain how the <strong class="pkg">GAP</strong> system may be extended with new objects using the circle multiplication as an example. We follow the guidelines given in the <strong class="pkg">GAP</strong> Reference Manual (see <a href="../../../doc/ref/chap79.html#X83548994805AD1C9"><span class="RefLink">Reference: Creating New Objects</span></a> and subsequent chapters), to which we refer for more details.</p>
 
 <p><a id="X86492955868108EC" name="X86492955868108EC"></a></p>
 
@@ -364,7 +364,7 @@ MyCircleObject( -2/3 )
 
 </pre></div>
 
-<p>The <strong class="pkg">GAP</strong> code used in this Chapter, is contained in the files <code class="file">circle/lib/circle.gd</code> and <code class="file">circle/lib/circle.gi</code> (without <code class="code">My</code> in identifiers). For more examples of implementing new <strong class="pkg">GAP</strong> objects and further details see <a href="https://www.gap-system.org/Manuals/doc/ref/chap79.html#X83548994805AD1C9"><span class="RefLink">Reference: Creating New Objects</span></a> and subsequent chapters in the <strong class="pkg">GAP</strong> Reference Manual.</p>
+<p>The <strong class="pkg">GAP</strong> code used in this Chapter, is contained in the files <code class="file">circle/lib/circle.gd</code> and <code class="file">circle/lib/circle.gi</code> (without <code class="code">My</code> in identifiers). For more examples of implementing new <strong class="pkg">GAP</strong> objects and further details see <a href="../../../doc/ref/chap79.html#X83548994805AD1C9"><span class="RefLink">Reference: Creating New Objects</span></a> and subsequent chapters in the <strong class="pkg">GAP</strong> Reference Manual.</p>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap1.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap3.html">[Next Chapter]</a>&nbsp;  </div>
