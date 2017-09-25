@@ -9,11 +9,11 @@ SetPackageInfo( rec(
 
 PackageName := "Circle",
 Subtitle := "Adjoint groups of finite rings",
-Version := "1.6.0",
-Date := "23/09/2017",
+Version := "1.6.1",
+Date := "25/09/2017",
 ##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "1.6.0">
-##  <!ENTITY RELEASEDATE "23 September 2017">
+##  <!ENTITY VERSION "1.6.1">
+##  <!ENTITY RELEASEDATE "25 September 2017">
 ##  <!ENTITY RELEASEYEAR "2017">
 ##  <#/GAPDoc>
 
