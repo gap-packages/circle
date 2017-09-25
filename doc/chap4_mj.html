@@ -103,8 +103,7 @@ Group([ f1, f2, f3, f4, f5, f6 ])
 
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">R := Algebra( GF(3), One(GF(3))*[x,y] );</span>
 &lt;algebra over GF(3), with 2 generators&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := AdjointGroup( R );</span>
-&lt;group of size 729 with 3 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := AdjointGroup( R );;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">H := Image( IsomorphismPcGroup( G ) );</span>
 Group([ f1, f2, f3, f4, f5, f6 ])
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length( MinimalGeneratingSet( H ) );</span>

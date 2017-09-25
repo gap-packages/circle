@@ -6,10 +6,10 @@
                          [1XAdjoint groups of finite rings[101X
   
   
-                                 Version 1.6.0
+                                 Version 1.6.1
   
   
-                               23 September 2017
+                               25 September 2017
   
   
                               Alexander Konovalov
@@ -62,7 +62,7 @@
   [5XCircle[105X, please cite it in the following form:[133X
   
   [33X[0;0YA.  Konovalov, P. Soules. [13XCircle --- Adjoint groups of finite rings, Version
-  1.6.0;[113X 2017 ([7Xhttp://www.cs.st-andrews.ac.uk/~alexk/circle/[107X).[133X
+  1.6.1;[113X 2017 ([7Xhttp://www.cs.st-andrews.ac.uk/~alexk/circle/[107X).[133X
   
   
   -------------------------------------------------------
