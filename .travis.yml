@@ -1,36 +1,35 @@
-dist: trusty
-language: c
+language: C
+sudo: required
+
+services:
+  - docker
+
 env:
   global:
     - GAPROOT=gaproot
     - COVDIR=coverage
 
-addons:
-  apt_packages:
-    - libgmp-dev
-    - libreadline-dev
-    - libgmp-dev:i386
-    - libreadline-dev:i386
-    - gcc-multilib
-    - g++-multilib
-
 matrix:
   include:
-    - env: CFLAGS="-O2"
-      compiler: clang
-    - env: CFLAGS="-O2"
-      compiler: gcc
-    - env: ABI=32
+    - env: CONTAINER="gap-docker-stable"
+    - env: CONTAINER="gap-docker-master"
 
 branches:
   only:
     - master
 
-before_script:
-  - scripts/build_gap.sh
-  - scripts/build_pkg.sh
+before_install:
+  - docker pull gapsystem/$CONTAINER
+  - if [[ $CONTAINER = gap-docker-stable ]]; then export GAP_BRANCH=stable-4.8; else export GAP_BRANCH=master; fi
+
 script:
-  - scripts/run_tests.sh
-after_script:
-  - bash scripts/gather-coverage.sh
-  - bash <(curl -s https://codecov.io/bash)
+  - docker run -t -v $TRAVIS_BUILD_DIR:/home/gap/.gap/pkg/circle gapsystem/$CONTAINER /home/gap/inst/gap-$GAP_BRANCH/bin/gap.sh -A -l "/home/gap/.gap;/home/gap/inst/gap-$GAP_BRANCH/" /home/gap/.gap/pkg/circle/tst/testall.g
+
+#before_script:
+#  - scripts/build_gap.sh
+#  - scripts/build_pkg.sh
+#script:
+#  - scripts/run_tests.sh
+#after_script:
+#  - bash scripts/gather-coverage.sh
+#  - bash <(curl -s https://codecov.io/bash)
