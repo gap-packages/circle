@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/gap-packages/circle.svg?branch=master)](https://travis-ci.org/gap-packages/circle)
+[![Code Coverage](https://codecov.io/github/gap-packages/circle/coverage.svg?branch=master&token=)](https://codecov.io/gh/gap-packages/circle)
+
 # The Circle Package: Adjoint groups of finite rings
 
 Let R be an  associative ring,  not necessarily with a unit element.  The set 

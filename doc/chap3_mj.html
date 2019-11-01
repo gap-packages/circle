@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <script type="text/javascript"
-  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 <title>GAP (Circle) - Chapter 3: Circle functions</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -85,7 +85,7 @@ gap&gt;
 
 <h5>3.1-1 CircleObject</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CircleObject</code>( <var class="Arg">x</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CircleObject</code>( <var class="Arg">x</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Let <var class="Arg">x</var> be a ring element. Then <code class="code">CircleObject(x)</code> returns the corresponding circle object. If <var class="Arg">x</var> lies in the family <code class="code">fam</code>, then <code class="code">CircleObject(x)</code> lies in the family <code class="func">CircleFamily</code> (<a href="chap3_mj.html#X7F88A0017DC2E878"><span class="RefLink">3.1-5</span></a>), corresponding to the family <code class="code">fam</code>.</p>
 
 
@@ -100,7 +100,7 @@ CircleObject( 2 )
 
 <h5>3.1-2 UnderlyingRingElement</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; UnderlyingRingElement</code>( <var class="Arg">x</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; UnderlyingRingElement</code>( <var class="Arg">x</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns the corresponding ring element for the circle object <var class="Arg">x</var>.</p>
 
 
@@ -117,8 +117,8 @@ CircleObject( 2 )
 
 <h5>3.1-3 IsCircleObject</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsCircleObject</code>( <var class="Arg">x</var> )</td><td class="tdright">( category )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsCircleObjectCollection</code>( <var class="Arg">x</var> )</td><td class="tdright">( category )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsCircleObject</code>( <var class="Arg">x</var> )</td><td class="tdright">(&nbsp;category&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsCircleObjectCollection</code>( <var class="Arg">x</var> )</td><td class="tdright">(&nbsp;category&nbsp;)</td></tr></table></div>
 <p>An object <var class="Arg">x</var> lies in the category <code class="code">IsCircleObject</code> if and only if it lies in a family constructed by <code class="func">CircleFamily</code> (<a href="chap3_mj.html#X7F88A0017DC2E878"><span class="RefLink">3.1-5</span></a>). Since circle objects can be multiplied via <code class="code">*</code> with elements in their family, and we need operations <code class="code">One</code> and <code class="code">Inverse</code> to deal with groups they generate, circle objects are implemented in the category <code class="code">IsMultiplicativeElementWithInverse</code>. A collection of circle objects (e.g. adjoint semigroup or adjoint group) will lie in the category <code class="code">IsCircleObjectCollection</code>.</p>
 
 
@@ -138,8 +138,8 @@ true
 
 <h5>3.1-4 IsPositionalObjectOneSlotRep</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPositionalObjectOneSlotRep</code>( <var class="Arg">x</var> )</td><td class="tdright">( representation )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsDefaultCircleObject</code>( <var class="Arg">x</var> )</td><td class="tdright">( representation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPositionalObjectOneSlotRep</code>( <var class="Arg">x</var> )</td><td class="tdright">(&nbsp;representation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsDefaultCircleObject</code>( <var class="Arg">x</var> )</td><td class="tdright">(&nbsp;representation&nbsp;)</td></tr></table></div>
 <p>To store the corresponding circle object, we need only to store the underlying ring element. Since this is quite common situation, we defined the representation <code class="code">IsPositionalObjectOneSlotRep</code> for a more general case. Then we defined <code class="code">IsDefaultCircleObject</code> as a synonym of <code class="code">IsPositionalObjectOneSlotRep</code> for objects in <code class="func">IsCircleObject</code> (<a href="chap3_mj.html#X810FB77F860F888D"><span class="RefLink">3.1-3</span></a>).</p>
 
 
@@ -156,7 +156,7 @@ true
 
 <h5>3.1-5 CircleFamily</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CircleFamily</code>( <var class="Arg">fam</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CircleFamily</code>( <var class="Arg">fam</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p><code class="code">CircleFamily(fam)</code> is a family, elements of which are in one-to-one correspondence with elements of the family <var class="Arg">fam</var>, but with the circle multiplication as an infix multiplication. That is, for <span class="SimpleMath">\(x\)</span>, <span class="SimpleMath">\(y\)</span> in <var class="Arg">fam</var>, the product of their images in the <code class="code">CircleFamily(fam)</code> will be the image of <span class="SimpleMath">\( x + y + x y \)</span>. The relation between these families is demonstrated by the following equality:</p>
 
 
@@ -175,7 +175,7 @@ true
 
 <h5>3.2-1 One</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; One</code>( <var class="Arg">x</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; One</code>( <var class="Arg">x</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>This operation returns the multiplicative neutral element for the circle object <var class="Arg">x</var>. The result is the circle object corresponding to the additive neutral element of the appropriate ring.</p>
 
 
@@ -194,7 +194,7 @@ CircleObject( [ [ 0, 0 ], [ 0, 0 ] ] )
 
 <h5>3.2-2 InverseOp</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InverseOp</code>( <var class="Arg">x</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InverseOp</code>( <var class="Arg">x</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>For a circle object <var class="Arg">x</var>, returns the multiplicative inverse of <var class="Arg">x</var> with respect to the circle multiplication; if such one does not exist then <code class="keyw">fail</code> is returned.</p>
 
 <p>In our implementation we assume that the underlying ring is a subring of the ring with one, thus, if the circle inverse for an element <span class="SimpleMath">\(x\)</span> exists, than it can be computed as <span class="SimpleMath">\(-x(1+x)^{-1}\)</span>.</p>
@@ -229,7 +229,7 @@ fail
 
 <h5>3.2-3 IsUnit</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsUnit</code>( [<var class="Arg">R</var>, ]<var class="Arg">x</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsUnit</code>( [<var class="Arg">R</var>, ]<var class="Arg">x</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Let <var class="Arg">x</var> be a circle object corresponding to an element of the ring <var class="Arg">R</var>. Then the operation <code class="code">IsUnit</code> returns <code class="code">true</code>, if <var class="Arg">x</var> is invertible in <var class="Arg">R</var> with respect to the circle multiplication, and <code class="code">false</code> otherwise.</p>
 
 
@@ -269,7 +269,7 @@ false
 
 <h5>3.2-4 IsCircleUnit</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsCircleUnit</code>( [<var class="Arg">R</var>, ]<var class="Arg">x</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsCircleUnit</code>( [<var class="Arg">R</var>, ]<var class="Arg">x</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Let <var class="Arg">x</var> be an element of the ring <var class="Arg">R</var>. Then <code class="code">IsCircleUnit( R, x )</code> determines whether <var class="Arg">x</var> is invertible in <var class="Arg">R</var> with respect to the circle multilpication. This is equivalent to the condition that 1+<var class="Arg">x</var> is a unit in <var class="Arg">R</var> with respect to the ordinary multiplication.</p>
 
 
@@ -314,7 +314,7 @@ false
 
 <h5>3.3-1 AdjointSemigroup</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AdjointSemigroup</code>( <var class="Arg">R</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AdjointSemigroup</code>( <var class="Arg">R</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>If <var class="Arg">R</var> is a finite ring then <code class="code">AdjointSemigroup(<var class="Arg">R</var>)</code> will return the monoid which is formed by all elements of <var class="Arg">R</var> with respect to the circle multiplication.</p>
 
 <p>The implementation is rather straightforward and was added to provide a link to the <strong class="pkg">GAP</strong> functionality for semigroups. It assumes that the enumaration of all elements of the ring <var class="Arg">R</var> is feasible.</p>
@@ -333,7 +333,7 @@ false
 
 <h5>3.3-2 AdjointGroup</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AdjointGroup</code>( <var class="Arg">R</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AdjointGroup</code>( <var class="Arg">R</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>If <var class="Arg">R</var> is a finite radical algebra then <code class="code">AdjointGroup(<var class="Arg">R</var>)</code> will return the adjoint group of <var class="Arg">R</var>, given as a group generated by a set of circle objects.</p>
 
 <p>To compute the adjoint group of a finite radical algebra, <strong class="pkg">Circle</strong> uses the fact that all elements of a radical algebra form a group with respect to the circle multiplication. Thus, the adjoint group of <var class="Arg">R</var> coincides with <var class="Arg">R</var> elementwise, and we can randomly select an appropriate set of generators for the adjoint group.</p>
@@ -505,7 +505,7 @@ Units(&lt;R&gt;), which possibly may be computed faster!!!
 
 <h5>3.4-1 InfoCircle</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InfoCircle</code></td><td class="tdright">( info class )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InfoCircle</code></td><td class="tdright">(&nbsp;info class&nbsp;)</td></tr></table></div>
 <p><code class="code">InfoCircle</code> is a special Info class for <strong class="pkg">Circle</strong> algorithms. It has 2 levels: 0 (default) and 1. To change info level to <code class="code">k</code>, use command <code class="code">SetInfoLevel(InfoCircle, k)</code>.</p>
 
 
