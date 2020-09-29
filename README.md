@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/gap-packages/circle.svg?branch=master)](https://travis-ci.org/gap-packages/circle)
+[![Build Status](https://travis-ci.com/gap-packages/circle.svg?branch=master)](https://travis-ci.com/gap-packages/circle)
 [![Code Coverage](https://codecov.io/github/gap-packages/circle/coverage.svg?branch=master&token=)](https://codecov.io/gh/gap-packages/circle)
 
 # The Circle Package: Adjoint groups of finite rings
