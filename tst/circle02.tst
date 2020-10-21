@@ -188,16 +188,14 @@ MyCircleObject( -2 )
 gap> MyCircleObject(2)^-1; 
 MyCircleObject( -2/3 )
 
-# [ ".//doc/objects.xml", 383, 398 ]
+# [ ".//doc/objects.xml", 383, 396 ]
 
-gap> Group( MyCircleObject(2) );  
+gap> Group( MyCircleObject(2) );;
 #I  default `IsGeneratorsOfMagmaWithInverses' method returns `true' for
 [ MyCircleObject( 2 ) ]
-<group with 1 generators>
-gap> G:=Group( [MyCircleObject( ZmodnZObj( 2,8 ) )  ]);
+gap> G:=Group( [MyCircleObject( ZmodnZObj( 2,8 ) )  ]);;
 #I  default `IsGeneratorsOfMagmaWithInverses' method returns `true' for
 [ MyCircleObject( ZmodnZObj( 2, 8 ) ) ]
-<group with 1 generators>
 gap> Size(G);
 2
 gap> AsList(G);
