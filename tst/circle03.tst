@@ -113,20 +113,18 @@ true
 gap> IsCircleUnit( [ [ 1, 1 ],[ 0, 1 ] ] ); 
 false
 
-# [ ".//doc/funct.xml", 331, 338 ]
+# [ ".//doc/funct.xml", 331, 337 ]
 
-gap> R:=Ring( [ ZmodnZObj(2,8) ] );
-<ring with 1 generators>
+gap> R:=Ring( [ ZmodnZObj(2,8) ] );;
 gap> S:=AdjointSemigroup(R);
 <monoid with 4 generators>
 
-# [ ".//doc/funct.xml", 391, 408 ]
+# [ ".//doc/funct.xml", 390, 406 ]
 
 gap> x:=[ [ 0, 1, 0 ],
 >         [ 0, 0, 1 ],
 >         [ 0, 0, 0 ] ];;
-gap> R := Algebra( GF(2), [ One(GF(2))*x ] );  
-<algebra over GF(2), with 1 generators>
+gap> R := Algebra( GF(2), [ One(GF(2))*x ] );;
 gap> RadicalOfAlgebra( R ) = R;
 true
 gap> Dimension(R);
@@ -137,7 +135,7 @@ true
 gap> StructureDescription( G );
 "C4"
 
-# [ ".//doc/funct.xml", 417, 436 ]
+# [ ".//doc/funct.xml", 415, 434 ]
 
 gap> x:=[ [ 0, 1, 0 ],
 >         [ 0, 0, 0 ],     
@@ -156,24 +154,21 @@ gap> G := AdjointGroup( R );
 gap> StructureDescription( G );
 "D8"
 
-# [ ".//doc/funct.xml", 452, 466 ]
+# [ ".//doc/funct.xml", 450, 462 ]
 
-gap> R := Ring( [ ZmodnZObj(2,8) ] );
-<ring with 1 generators>
+gap> R := Ring( [ ZmodnZObj(2,8) ] );;
 gap> G := AdjointGroup( R );
 <group of size 4 with 2 generators>
 gap> StructureDescription( G );
 "C2 x C2"
-gap> R := Ring( [ ZmodnZObj(2,256) ] );   
-<ring with 1 generators>
+gap> R := Ring( [ ZmodnZObj(2,256) ] );;
 gap> G := AdjointGroup( R );;
 gap> StructureDescription( G );
 "C64 x C2"
 
-# [ ".//doc/funct.xml", 474, 487 ]
+# [ ".//doc/funct.xml", 470, 482 ]
 
-gap> R := Ring( [ ZmodnZObj(2,256) ] );  
-<ring with 1 generators>
+gap> R := Ring( [ ZmodnZObj(2,256) ] );; 
 gap> S := AdjointSemigroup( R );
 <monoid with 128 generators>
 gap> H := GreensHClassOfElement(S,One(S));
@@ -183,19 +178,17 @@ gap> G:=AsGroup(H);
 gap> StructureDescription(G);
 "C64 x C2"
 
-# [ ".//doc/funct.xml", 497, 509 ]
+# [ ".//doc/funct.xml", 492, 502 ]
 
-gap> R := Ring( [ ZmodnZObj(2,256) ] );   
-<ring with 1 generators>
+gap> R := Ring( [ ZmodnZObj(2,256) ] );;
 gap> AdjointGroup(R);;
-gap> R := Ring( [ ZmodnZObj(2,256) ] );
-<ring with 1 generators>
+gap> R := Ring( [ ZmodnZObj(2,256) ] );;
 gap> S:=AdjointSemigroup(R); 
 <monoid with 128 generators>
 gap> AsGroup(GreensHClassOfElement(S,One(S))); 
 <group of size 128 with 2 generators>
 
-# [ ".//doc/funct.xml", 528, 542 ]
+# [ ".//doc/funct.xml", 521, 535 ]
 
 gap> LoadPackage( "laguna", false );
 true
@@ -209,7 +202,7 @@ gap> IdGroup( Units( FG ) );
 #I  LAGUNA package: Computing the unit group ...
 [ 128, 170 ]
 
-# [ ".//doc/funct.xml", 551, 568 ]
+# [ ".//doc/funct.xml", 544, 561 ]
 
 gap> Size( AdjointGroup( GroupRing( GF(2), DihedralGroup(8) ) ) );
 
@@ -226,12 +219,11 @@ Units(<R>), which possibly may be computed faster!!!
 
 10
 
-# [ ".//doc/funct.xml", 593, 605 ]
+# [ ".//doc/funct.xml", 586, 597 ]
 
 gap> SetInfoLevel( InfoCircle, 1 );
 gap> SetInfoLevel(InfoCircle,1);
-gap> R := Ring( [ ZmodnZObj(2,8) ]);
-<ring with 1 generators>
+gap> R := Ring( [ ZmodnZObj(2,8) ]);;
 gap> G := AdjointGroup( R );
 #I  Circle : <R> is not a radical algebra, computing circle units ...
 #I  Circle : searching generators for adjoint group ...
