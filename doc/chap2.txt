@@ -367,14 +367,12 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27XGroup( MyCircleObject(2) );  [127X[104X
+    [4X[25Xgap>[125X [27XGroup( MyCircleObject(2) );;[127X[104X
     [4X[28X#I  default `IsGeneratorsOfMagmaWithInverses' method returns `true' for[128X[104X
     [4X[28X[ MyCircleObject( 2 ) ][128X[104X
-    [4X[28X<group with 1 generators>[128X[104X
-    [4X[25Xgap>[125X [27XG:=Group( [MyCircleObject( ZmodnZObj( 2,8 ) )  ]);[127X[104X
+    [4X[25Xgap>[125X [27XG:=Group( [MyCircleObject( ZmodnZObj( 2,8 ) )  ]);;[127X[104X
     [4X[28X#I  default `IsGeneratorsOfMagmaWithInverses' method returns `true' for[128X[104X
     [4X[28X[ MyCircleObject( ZmodnZObj( 2, 8 ) ) ][128X[104X
-    [4X[28X<group with 1 generators>[128X[104X
     [4X[25Xgap>[125X [27XSize(G);[127X[104X
     [4X[28X2[128X[104X
     [4X[25Xgap>[125X [27XAsList(G);[127X[104X

@@ -276,8 +276,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27XR:=Ring( [ ZmodnZObj(2,8) ] );[127X[104X
-    [4X[28X<ring with 1 generators>[128X[104X
+    [4X[25Xgap>[125X [27XR:=Ring( [ ZmodnZObj(2,8) ] );;[127X[104X
     [4X[25Xgap>[125X [27XS:=AdjointSemigroup(R);[127X[104X
     [4X[28X<monoid with 4 generators>[128X[104X
     [4X[28X[128X[104X
@@ -324,8 +323,7 @@
     [4X[25Xgap>[125X [27Xx:=[ [ 0, 1, 0 ],[127X[104X
     [4X[25X>[125X [27X        [ 0, 0, 1 ],[127X[104X
     [4X[25X>[125X [27X        [ 0, 0, 0 ] ];;[127X[104X
-    [4X[25Xgap>[125X [27XR := Algebra( GF(2), [ One(GF(2))*x ] );  [127X[104X
-    [4X[28X<algebra over GF(2), with 1 generators>[128X[104X
+    [4X[25Xgap>[125X [27XR := Algebra( GF(2), [ One(GF(2))*x ] );;[127X[104X
     [4X[25Xgap>[125X [27XRadicalOfAlgebra( R ) = R;[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XDimension(R);[127X[104X
@@ -376,14 +374,12 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27XR := Ring( [ ZmodnZObj(2,8) ] );[127X[104X
-    [4X[28X<ring with 1 generators>[128X[104X
+    [4X[25Xgap>[125X [27XR := Ring( [ ZmodnZObj(2,8) ] );;[127X[104X
     [4X[25Xgap>[125X [27XG := AdjointGroup( R );[127X[104X
     [4X[28X<group of size 4 with 2 generators>[128X[104X
     [4X[25Xgap>[125X [27XStructureDescription( G );[127X[104X
     [4X[28X"C2 x C2"[128X[104X
-    [4X[25Xgap>[125X [27XR := Ring( [ ZmodnZObj(2,256) ] );   [127X[104X
-    [4X[28X<ring with 1 generators>[128X[104X
+    [4X[25Xgap>[125X [27XR := Ring( [ ZmodnZObj(2,256) ] );;[127X[104X
     [4X[25Xgap>[125X [27XG := AdjointGroup( R );;[127X[104X
     [4X[25Xgap>[125X [27XStructureDescription( G );[127X[104X
     [4X[28X"C64 x C2"[128X[104X
@@ -397,8 +393,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27XR := Ring( [ ZmodnZObj(2,256) ] );  [127X[104X
-    [4X[28X<ring with 1 generators>[128X[104X
+    [4X[25Xgap>[125X [27XR := Ring( [ ZmodnZObj(2,256) ] );; [127X[104X
     [4X[25Xgap>[125X [27XS := AdjointSemigroup( R );[127X[104X
     [4X[28X<monoid with 128 generators>[128X[104X
     [4X[25Xgap>[125X [27XH := GreensHClassOfElement(S,One(S));[127X[104X
@@ -420,11 +415,9 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27XR := Ring( [ ZmodnZObj(2,256) ] );   [127X[104X
-    [4X[28X<ring with 1 generators>[128X[104X
+    [4X[25Xgap>[125X [27XR := Ring( [ ZmodnZObj(2,256) ] );;[127X[104X
     [4X[25Xgap>[125X [27XAdjointGroup(R);;[127X[104X
-    [4X[25Xgap>[125X [27XR := Ring( [ ZmodnZObj(2,256) ] );[127X[104X
-    [4X[28X<ring with 1 generators>[128X[104X
+    [4X[25Xgap>[125X [27XR := Ring( [ ZmodnZObj(2,256) ] );;[127X[104X
     [4X[25Xgap>[125X [27XS:=AdjointSemigroup(R); [127X[104X
     [4X[28X<monoid with 128 generators>[128X[104X
     [4X[25Xgap>[125X [27XAsGroup(GreensHClassOfElement(S,One(S))); [127X[104X
@@ -501,8 +494,7 @@
     [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XSetInfoLevel( InfoCircle, 1 );[127X[104X
     [4X[25Xgap>[125X [27XSetInfoLevel(InfoCircle,1);[127X[104X
-    [4X[25Xgap>[125X [27XR := Ring( [ ZmodnZObj(2,8) ]);[127X[104X
-    [4X[28X<ring with 1 generators>[128X[104X
+    [4X[25Xgap>[125X [27XR := Ring( [ ZmodnZObj(2,8) ]);;[127X[104X
     [4X[25Xgap>[125X [27XG := AdjointGroup( R );[127X[104X
     [4X[28X#I  Circle : <R> is not a radical algebra, computing circle units ...[128X[104X
     [4X[28X#I  Circle : searching generators for adjoint group ...[128X[104X
