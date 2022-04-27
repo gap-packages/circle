@@ -1,17 +1,17 @@
 # Circle, chapter 3
-# [ ".//doc/funct.xml", 41, 46 ]
+# [ ".//doc/funct.xml", 45, 50 ]
 
 gap> a := CircleObject( 2 );
 CircleObject( 2 )
 
-# [ ".//doc/funct.xml", 57, 64 ]
+# [ ".//doc/funct.xml", 61, 68 ]
 
 gap> a := CircleObject( 2 );
 CircleObject( 2 )
 gap> UnderlyingRingElement( a );    
 2
 
-# [ ".//doc/funct.xml", 87, 97 ]
+# [ ".//doc/funct.xml", 91, 101 ]
 
 gap> IsCircleObject( 2 ); IsCircleObject( CircleObject( 2 ) );            
 false
@@ -21,19 +21,19 @@ true
 gap> IsCircleObjectCollection( [ CircleObject(0), CircleObject(2) ] );
 true
 
-# [ ".//doc/funct.xml", 117, 124 ]
+# [ ".//doc/funct.xml", 121, 128 ]
 
 gap> IsPositionalObjectOneSlotRep( CircleObject( 2 ) );
 true
 gap> IsDefaultCircleObject( CircleObject( 2 ) );                          
 true
 
-# [ ".//doc/funct.xml", 140, 145 ]
+# [ ".//doc/funct.xml", 144, 149 ]
 
 gap> FamilyObj( CircleObject ( 2 ) ) = CircleFamily( FamilyObj( 2 ) );
 true
 
-# [ ".//doc/funct.xml", 164, 173 ]
+# [ ".//doc/funct.xml", 168, 177 ]
 
 gap> One( CircleObject( 5 ) );
 CircleObject( 0 )
@@ -42,7 +42,7 @@ true
 gap> One( CircleObject( [ [ 1, 1 ],[ 0, 1 ] ] ) );
 CircleObject( [ [ 0, 0 ], [ 0, 0 ] ] )
 
-# [ ".//doc/funct.xml", 191, 200 ]
+# [ ".//doc/funct.xml", 195, 204 ]
 
 gap> CircleObject( -2 )^-1;                        
 CircleObject( -2 )
@@ -51,7 +51,7 @@ CircleObject( -2/3 )
 gap> CircleObject( -2 )*CircleObject( -2 )^-1;
 CircleObject( 0 )
 
-# [ ".//doc/funct.xml", 202, 213 ]
+# [ ".//doc/funct.xml", 206, 217 ]
 
 gap> m := CircleObject( [ [ 1, 1 ], [ 0, 1 ] ] );   
 CircleObject( [ [ 1, 1 ], [ 0, 1 ] ] )
@@ -62,7 +62,7 @@ CircleObject( [ [ 0, 0 ], [ 0, 0 ] ] )
 gap> CircleObject( [ [ 0, 1 ], [ 1, 0 ] ] )^-1; 
 fail
 
-# [ ".//doc/funct.xml", 228, 242 ]
+# [ ".//doc/funct.xml", 232, 246 ]
 
 gap> IsUnit( Integers, CircleObject( -2 ) );
 true
@@ -76,7 +76,7 @@ gap> m := CircleObject( [ [ 1, 1 ],[ 0, 1 ] ] );;
 gap> IsUnit( FullMatrixAlgebra( Rationals, 2 ), m );
 true
 
-# [ ".//doc/funct.xml", 249, 260 ]
+# [ ".//doc/funct.xml", 253, 264 ]
 
 gap> IsUnit( CircleObject( -2 ) );
 true
@@ -87,7 +87,7 @@ true
 gap> IsUnit( CircleObject( [ [ 1, 1 ],[ 0, 1 ] ] ) );                                    
 false
 
-# [ ".//doc/funct.xml", 276, 291 ]
+# [ ".//doc/funct.xml", 280, 295 ]
 
 gap> IsCircleUnit( Integers, -2 );
 true
@@ -102,7 +102,7 @@ gap> m := [ [ 1, 1 ],[ 0, 1 ] ];
 gap> IsCircleUnit( FullMatrixAlgebra(Rationals,2), m );
 true
 
-# [ ".//doc/funct.xml", 296, 307 ]
+# [ ".//doc/funct.xml", 300, 311 ]
 
 gap> IsCircleUnit( -2 );                               
 true
@@ -113,13 +113,13 @@ true
 gap> IsCircleUnit( [ [ 1, 1 ],[ 0, 1 ] ] ); 
 false
 
-# [ ".//doc/funct.xml", 331, 337 ]
+# [ ".//doc/funct.xml", 335, 341 ]
 
 gap> R:=Ring( [ ZmodnZObj(2,8) ] );;
 gap> S:=AdjointSemigroup(R);
 <monoid with 4 generators>
 
-# [ ".//doc/funct.xml", 390, 406 ]
+# [ ".//doc/funct.xml", 394, 410 ]
 
 gap> x:=[ [ 0, 1, 0 ],
 >         [ 0, 0, 1 ],
@@ -135,7 +135,7 @@ true
 gap> StructureDescription( G );
 "C4"
 
-# [ ".//doc/funct.xml", 415, 434 ]
+# [ ".//doc/funct.xml", 419, 438 ]
 
 gap> x:=[ [ 0, 1, 0 ],
 >         [ 0, 0, 0 ],     
@@ -154,7 +154,7 @@ gap> G := AdjointGroup( R );
 gap> StructureDescription( G );
 "D8"
 
-# [ ".//doc/funct.xml", 450, 462 ]
+# [ ".//doc/funct.xml", 454, 466 ]
 
 gap> R := Ring( [ ZmodnZObj(2,8) ] );;
 gap> G := AdjointGroup( R );
@@ -166,7 +166,7 @@ gap> G := AdjointGroup( R );;
 gap> StructureDescription( G );
 "C64 x C2"
 
-# [ ".//doc/funct.xml", 470, 482 ]
+# [ ".//doc/funct.xml", 474, 486 ]
 
 gap> R := Ring( [ ZmodnZObj(2,256) ] );; 
 gap> S := AdjointSemigroup( R );
@@ -178,7 +178,7 @@ gap> G:=AsGroup(H);
 gap> StructureDescription(G);
 "C64 x C2"
 
-# [ ".//doc/funct.xml", 492, 502 ]
+# [ ".//doc/funct.xml", 496, 506 ]
 
 gap> R := Ring( [ ZmodnZObj(2,256) ] );;
 gap> AdjointGroup(R);;
@@ -188,7 +188,7 @@ gap> S:=AdjointSemigroup(R);
 gap> AsGroup(GreensHClassOfElement(S,One(S))); 
 <group of size 128 with 2 generators>
 
-# [ ".//doc/funct.xml", 521, 535 ]
+# [ ".//doc/funct.xml", 525, 539 ]
 
 gap> LoadPackage( "laguna", false );
 true
@@ -202,7 +202,7 @@ gap> IdGroup( Units( FG ) );
 #I  LAGUNA package: Computing the unit group ...
 [ 128, 170 ]
 
-# [ ".//doc/funct.xml", 544, 561 ]
+# [ ".//doc/funct.xml", 548, 565 ]
 
 gap> Size( AdjointGroup( GroupRing( GF(2), DihedralGroup(8) ) ) );
 
@@ -219,7 +219,7 @@ Units(<R>), which possibly may be computed faster!!!
 
 10
 
-# [ ".//doc/funct.xml", 586, 597 ]
+# [ ".//doc/funct.xml", 590, 601 ]
 
 gap> SetInfoLevel( InfoCircle, 1 );
 gap> SetInfoLevel(InfoCircle,1);

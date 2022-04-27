@@ -1,6 +1,6 @@
 #############################################################################
 ##
-#W  circle.gi               The CIRCLE package            Alexander Konovalov
+#W  circle.gi               The CIRCLE package             Olexandr Konovalov
 ##                                                          Panagiotis Soules
 ##
 ##  This file contains an implementation of circle objects.

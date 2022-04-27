@@ -7,9 +7,13 @@ To use the &Circle; package first you need to load it as follows:
 <![CDATA[
 gap> LoadPackage("circle");
 -----------------------------------------------------------------------------
-Loading  Circle 1.4.0 (Adjoint groups of finite rings)
-by Alexander Konovalov (http://www.cs.st-andrews.ac.uk/~alexk/) and
+Loading  Circle 1.6.5 (Adjoint groups of finite rings)
+by Olexandr Konovalov (https://alex-konovalov.github.io/) and
    Panagiotis Soules (psoules@math.uoa.gr).
+maintained by:
+   Olexandr Konovalov (https://alex-konovalov.github.io/).
+Homepage: https://gap-packages.github.io/circle
+Report issues at https://github.com/gap-packages/circle/issues
 -----------------------------------------------------------------------------
 true
 gap>

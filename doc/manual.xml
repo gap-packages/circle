@@ -12,9 +12,9 @@
   <Subtitle>Adjoint groups of finite rings</Subtitle>
   <Version>Version &VERSION;</Version>
 
-  <Author>Alexander Konovalov
-          <Email>alexk@mcs.st-andrews.ac.uk</Email>
-	      <Homepage>http://www.cs.st-andrews.ac.uk/&tilde;alexk/</Homepage>
+  <Author>Olexandr Konovalov
+          <Email>obk1@st-andrews.ac.uk</Email>
+	      <Homepage>https://alex-konovalov.github.io/</Homepage>
           <Address>
             School of Computer Science<Br/>
             University of St Andrews<Br/>
@@ -50,7 +50,7 @@ new multiplicative objects.
 
 <Copyright>
 
-&copyright; 2006-&RELEASEYEAR; by Alexander Konovalov and Panagiotis Soules
+&copyright; 2006-&RELEASEYEAR; by Olexandr Konovalov and Panagiotis Soules
 <P/>
 
 &Circle; is free software; you can redistribute it and/or modify it 
@@ -68,9 +68,9 @@ If you publish a result which was partially obtained with the usage of
 &Circle;, please cite it in the following form:
 <P/>
 
-A. Konovalov, P. Soules. 
+O. Konovalov, P. Soules. 
 <E>Circle --- Adjoint groups of finite rings, Version &VERSION;;</E> 
-&RELEASEYEAR; (<URL>http://www.cs.st-andrews.ac.uk/&tilde;alexk/circle/</URL>).
+&RELEASEYEAR; (<URL>https://gap-packages.github.io/circle/</URL>).
 </Copyright>
   
 <Acknowledgements>

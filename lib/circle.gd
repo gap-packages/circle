@@ -1,6 +1,6 @@
 #############################################################################
 ##
-#W  circle.gd               The CIRCLE package            Alexander Konovalov
+#W  circle.gd               The CIRCLE package             Olexandr Konovalov
 ##                                                          Panagiotis Soules
 ##
 ##  Let R be an associative ring, not necessarily with a unit element. The

@@ -1,6 +1,6 @@
 ###########################################################################
 ##
-#W makedocrel.g             The Circle package          Alexander Konovalov
+#W makedocrel.g             The Circle package           Olexandr Konovalov
 ##
 ###########################################################################
 

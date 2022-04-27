@@ -96,7 +96,7 @@ To use the &Circle; online help it is necessary to install the &GAP;4 package
 
 &Circle; is distributed in standard formats
 (<File>tar.gz</File>, <File>tar.bz2</File>, <File>zip</File> and <File>-win.zip</File>) 
-and can be obtained from <URL>http://www.cs.st-andrews.ac.uk/&tilde;alexk/circle/</URL>
+and can be obtained from <URL>https://gap-packages.github.io/circle</URL>
 or from the &GAP; homepage.
 To install the package, unpack its archive in the <File>pkg</File> subdirectory of your 
 &GAP; installation.

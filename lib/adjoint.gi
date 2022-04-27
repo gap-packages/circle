@@ -1,6 +1,6 @@
 #############################################################################
 ##
-#W  adjoint.gi              The CIRCLE package            Alexander Konovalov
+#W  adjoint.gi              The CIRCLE package             Olexandr Konovalov
 ##                                                          Panagiotis Soules
 ##
 ##  This file contains implementations related with 

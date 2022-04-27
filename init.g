@@ -1,6 +1,6 @@
 #############################################################################
 ##
-#W  init.g                  The CIRCLE package            Alexander Konovalov
+#W  init.g                  The CIRCLE package             Olexandr Konovalov
 ##                                                          Panagiotis Soules
 ##
 #############################################################################
