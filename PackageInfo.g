@@ -1,6 +1,6 @@
 #############################################################################
 ##
-#W  PackageInfo.g           The CIRCLE package            Alexander Konovalov
+#W  PackageInfo.g           The CIRCLE package             Olexandr Konovalov
 ##                                                          Panagiotis Soules
 ##
 #############################################################################
@@ -9,13 +9,13 @@ SetPackageInfo( rec(
 
 PackageName := "Circle",
 Subtitle := "Adjoint groups of finite rings",
-Version := "1.6.4",
-Date := "22/02/2021", # dd/mm/yyyy format
+Version := "1.6.5",
+Date := "27/04/2022", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 ##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "1.6.4">
-##  <!ENTITY RELEASEDATE "22 February 2021">
-##  <!ENTITY RELEASEYEAR "2021">
+##  <!ENTITY VERSION "1.6.5">
+##  <!ENTITY RELEASEDATE "27 April 2022">
+##  <!ENTITY RELEASEYEAR "2022">
 ##  <#/GAPDoc>
 
 SourceRepository := rec(
@@ -35,11 +35,11 @@ ArchiveFormats := ".tar.gz",
 Persons := [
   rec(
     LastName      := "Konovalov",
-    FirstNames    := "Alexander",
+    FirstNames    := "Olexandr",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "alexander.konovalov@st-andrews.ac.uk",
-    WWWHome       := "https://alexk.host.cs.st-andrews.ac.uk",
+    Email         := "obk1@st-andrews.ac.uk",
+    WWWHome       := "https://alex-konovalov.github.io/",
     PostalAddress := Concatenation( [
                      "School of Computer Science\n",
                      "University of St Andrews\n",

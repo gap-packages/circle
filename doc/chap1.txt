@@ -72,8 +72,7 @@
   site or from [7Xhttp://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/[107X.[133X
   
   [33X[0;0Y[5XCircle[105X  is  distributed  in  standard  formats  ([11Xtar.gz[111X,  [11Xtar.bz2[111X,  [11Xzip[111X  and
-  [11X-win.zip[111X)          and          can         be         obtained         from
-  [7Xhttp://www.cs.st-andrews.ac.uk/~alexk/circle/[107X  or  from the [5XGAP[105X homepage. To
-  install  the package, unpack its archive in the [11Xpkg[111X subdirectory of your [5XGAP[105X
-  installation.[133X
+  [11X-win.zip[111X)  and can be obtained from [7Xhttps://gap-packages.github.io/circle[107X or
+  from the [5XGAP[105X homepage. To install the package, unpack its archive in the [11Xpkg[111X
+  subdirectory of your [5XGAP[105X installation.[133X
   

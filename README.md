@@ -35,4 +35,4 @@ to load it using the following command:
     gap> LoadPackage("circle");
 
 
-Alexander Konovalov and Panagiotis Soules
+Olexandr Konovalov and Panagiotis Soules
