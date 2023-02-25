@@ -6,10 +6,10 @@
                          [1XAdjoint groups of finite rings[101X
   
   
-                                 Version 1.6.5
+                                 Version 1.6.6
   
   
-                                 27 April 2022
+                                25 February 2023
   
   
                                Olexandr Konovalov
@@ -47,13 +47,13 @@
   
   -------------------------------------------------------
   [1XCopyright[101X
-  [33X[0;0Y© 2006-2022 by Olexandr Konovalov and Panagiotis Soules[133X
+  [33X[0;0Y© 2006-2023 by Olexandr Konovalov and Panagiotis Soules[133X
   
   [33X[0;0Y[5XCircle[105X  is free software; you can redistribute it and/or modify it under the
   terms  of  the  GNU General Public License as published by the Free Software
   Foundation;  either  version 2 of the License, or (at your option) any later
   version.      For      details,      see      the     FSF's     own     site
-  [7Xhttp://www.gnu.org/licenses/gpl.html[107X.[133X
+  [7Xhttps://www.gnu.org/licenses/gpl.html[107X.[133X
   
   [33X[0;0YIf  you  obtained [5XCircle[105X, we would be grateful for a short notification sent
   to one of the authors.[133X
@@ -62,7 +62,7 @@
   [5XCircle[105X, please cite it in the following form:[133X
   
   [33X[0;0YO.  Konovalov, P. Soules. [13XCircle --- Adjoint groups of finite rings, Version
-  1.6.5;[113X 2022 ([7Xhttps://gap-packages.github.io/circle/[107X).[133X
+  1.6.6;[113X 2023 ([7Xhttps://gap-packages.github.io/circle/[107X).[133X
   
   
   -------------------------------------------------------
