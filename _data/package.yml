@@ -1,5 +1,6 @@
 name: Circle
-version: 1.6.6
+version: "1.6.6"
+license: "GPL-2.0-or-later"
 date: 2023-02-25
 description: |
     Adjoint groups of finite rings
@@ -35,3 +36,32 @@ abstract: |
 status: accepted
 doc-html: doc/chap0_mj.html
 doc-pdf: doc/manual.pdf
+keywords: |
+    circle multiplication, star multiplication, adjoint semigroup, adjoint group, radical algebra.
+citeas: |
+    <p class='BibEntry'>
+    [<span class='BibKey'>KS23</span>]   <b class='BibAuthor'>Konovalov, O. and Soules, P.</b>,
+     <i class='BibTitle'>Circle, Adjoint groups of finite rings,
+             Version 1.6.6</i>
+     (<span class='BibYear'>2023</span>)<br />
+    (<span class='BibNote'>Refereed GAP package</span>),
+    <span class='BibHowpublished'><a href="https://gap-packages.github.io/circle">https://gap-packages.github.io/circle</a></span>.
+    </p>
+    
+
+bibtex: |
+    @misc{ Circle1.6.6,
+      author =           {Konovalov, O. and Soules, P.},
+      title =            {{Circle},  Adjoint  groups  of finite rings, {V}ersion
+                          1.6.6},
+      month =            {Feb},
+      year =             {2023},
+      note =             {Refereed GAP package},
+      howpublished =     {\href          {https://gap-packages.github.io/circle}
+                          {\texttt{https://gap-packages.github.io/}\discretionary
+                          {}{}{}\texttt{circle}}},
+      keywords =         {circle  multiplication;  star  multiplication; adjoint
+                          semigroup; adjoint group; radical algebra},
+      printedkey =       {KS23}
+    }
+
