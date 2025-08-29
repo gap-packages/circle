@@ -75,7 +75,6 @@ PackageDoc := rec(
   PDFFile := "doc/manual.pdf",
   SixFile := "doc/manual.six",
   LongTitle := "Adjoint groups of finite rings",
-  Autoload := true
 ),
 
 Dependencies := rec(
