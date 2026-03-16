@@ -3,8 +3,7 @@
 
 To use the &Circle; package first you need to load it as follows:
 
-<Log>
-<![CDATA[
+<Log><![CDATA[
 gap> LoadPackage("circle");
 -----------------------------------------------------------------------------
 Loading  Circle 1.6.5 (Adjoint groups of finite rings)
@@ -17,8 +16,7 @@ Report issues at https://github.com/gap-packages/circle/issues
 -----------------------------------------------------------------------------
 true
 gap>
-]]>
-</Log>
+]]></Log>
 
 Note that if you entered examples from the previous chapter, you need
 to restart &GAP; before loading the &Circle; package.
@@ -42,12 +40,10 @@ corresponding circle object. If <A>x</A> lies in the family <C>fam</C>,
 then <C>CircleObject(x)</C> lies in the family <Ref Fam="CircleFamily"/>,
 corresponding to the family <C>fam</C>.
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> a := CircleObject( 2 );
 CircleObject( 2 )
-]]>
-</Example>
+]]></Example>
 
 </Description>        
 </ManSection>
@@ -58,14 +54,12 @@ CircleObject( 2 )
          Arg="x" />
 <Description>	      
 Returns the corresponding ring element for the circle object <A>x</A>.
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> a := CircleObject( 2 );
 CircleObject( 2 )
 gap> UnderlyingRingElement( a );    
 2
-]]>
-</Example>
+]]></Example>
 
 </Description>        
 </ManSection>
@@ -88,8 +82,7 @@ category <C>IsMultiplicativeElementWithInverse</C>. A collection of
 circle objects (e.g. adjoint semigroup or adjoint group) will lie in 
 the category <C>IsCircleObjectCollection</C>.
   
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsCircleObject( 2 ); IsCircleObject( CircleObject( 2 ) );            
 false
 true
@@ -97,8 +90,7 @@ gap> IsMultiplicativeElementWithInverse( CircleObject( 2 ) );
 true
 gap> IsCircleObjectCollection( [ CircleObject(0), CircleObject(2) ] );
 true
-]]>
-</Example>
+]]></Example>
 
 </Description> 
 </ManSection>
@@ -118,14 +110,12 @@ more general case. Then we defined <C>IsDefaultCircleObject</C> as a
 synonym of <C>IsPositionalObjectOneSlotRep</C> for objects in 
 <Ref Filt="IsCircleObject" />.
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsPositionalObjectOneSlotRep( CircleObject( 2 ) );
 true
 gap> IsDefaultCircleObject( CircleObject( 2 ) );                          
 true
-]]>
-</Example>
+]]></Example>
 
 </Description>              
 </ManSection>
@@ -141,12 +131,10 @@ That is, for <M>x</M>, <M>y</M> in <A>fam</A>, the product of their images
 in the <C>CircleFamily(fam)</C> will be the image of <M> x + y + x y </M>.
 The relation between these families is demonstrated by the following equality:
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> FamilyObj( CircleObject ( 2 ) ) = CircleFamily( FamilyObj( 2 ) );
 true
-]]>
-</Example>
+]]></Example>
 
 </Description> 
 </ManSection>
@@ -165,16 +153,14 @@ for the circle object <A>x</A>. The result is the circle
 object corresponding to the additive neutral element of 
 the appropriate ring. 
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> One( CircleObject( 5 ) );
 CircleObject( 0 )
 gap> One( CircleObject( 5 ) ) = CircleObject( Zero( 5 ) );
 true
 gap> One( CircleObject( [ [ 1, 1 ],[ 0, 1 ] ] ) );
 CircleObject( [ [ 0, 0 ], [ 0, 0 ] ] )
-]]>
-</Example>
+]]></Example>
 
 </Description>        
 </ManSection>
@@ -192,19 +178,16 @@ In our implementation we assume that the underlying ring is a
 subring of the ring with one, thus, if the circle inverse for 
 an element <M>x</M> exists, than it can be computed as <M>-x(1+x)^{-1}</M>.
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> CircleObject( -2 )^-1;                        
 CircleObject( -2 )
 gap> CircleObject( 2 )^-1; 
 CircleObject( -2/3 )
 gap> CircleObject( -2 )*CircleObject( -2 )^-1;
 CircleObject( 0 )
-]]>
-</Example>
+]]></Example>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> m := CircleObject( [ [ 1, 1 ], [ 0, 1 ] ] );   
 CircleObject( [ [ 1, 1 ], [ 0, 1 ] ] )
 gap> m^-1;    
@@ -213,8 +196,7 @@ gap> m * m^-1;
 CircleObject( [ [ 0, 0 ], [ 0, 0 ] ] )
 gap> CircleObject( [ [ 0, 1 ], [ 1, 0 ] ] )^-1; 
 fail
-]]>
-</Example>
+]]></Example>
 
 </Description>        
 </ManSection>
@@ -229,8 +211,7 @@ the ring <A>R</A>. Then the operation <C>IsUnit</C> returns
 <C>true</C>, if <A>x</A> is invertible in <A>R</A> with respect
 to the circle multiplication, and <C>false</C> otherwise.
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsUnit( Integers, CircleObject( -2 ) );
 true
 gap> IsUnit( Integers, CircleObject( 2 ) ); 
@@ -242,16 +223,14 @@ true
 gap> m := CircleObject( [ [ 1, 1 ],[ 0, 1 ] ] );;
 gap> IsUnit( FullMatrixAlgebra( Rationals, 2 ), m );
 true
-]]>
-</Example>
+]]></Example>
 
 
 
 If the first argument is omitted, the result will be returned with respect
 to the default ring of the circle object <A>x</A>.
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsUnit( CircleObject( -2 ) );
 true
 gap> IsUnit( CircleObject( 2 ) ); 
@@ -260,8 +239,7 @@ gap> IsUnit( CircleObject( ZmodnZObj(2,8) ) );
 true
 gap> IsUnit( CircleObject( [ [ 1, 1 ],[ 0, 1 ] ] ) );                                    
 false
-]]>
-</Example>
+]]></Example>
 
 </Description>              
 </ManSection>
@@ -277,8 +255,7 @@ in <A>R</A> with respect to the circle multilpication. This is
 equivalent to the condition that 1+<A>x</A> is a unit in <A>R</A> 
 with respect to the ordinary multiplication. 
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsCircleUnit( Integers, -2 );
 true
 gap> IsCircleUnit( Integers, 2 ); 
@@ -291,14 +268,12 @@ gap> m := [ [ 1, 1 ],[ 0, 1 ] ];
 [ [ 1, 1 ], [ 0, 1 ] ]
 gap> IsCircleUnit( FullMatrixAlgebra(Rationals,2), m );
 true
-]]>
-</Example>
+]]></Example>
 
 If the first argument is omitted, the result will be returned with respect
 to the default ring of <A>x</A>.
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsCircleUnit( -2 );                               
 true
 gap> IsCircleUnit( 2 ); 
@@ -307,8 +282,7 @@ gap> IsCircleUnit( ZmodnZObj(2,8) );
 true
 gap> IsCircleUnit( [ [ 1, 1 ],[ 0, 1 ] ] ); 
 false
-]]>
-</Example>
+]]></Example>
 
 </Description>              
 </ManSection>
@@ -332,13 +306,11 @@ The implementation is rather straightforward and was added to provide a
 link to the &GAP; functionality for semigroups. It assumes that the
 enumaration of all elements of the ring <A>R</A> is feasible.
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> R:=Ring( [ ZmodnZObj(2,8) ] );;
 gap> S:=AdjointSemigroup(R);
 <monoid with 4 generators>
-]]>
-</Example>
+]]></Example>
 
 </Description> 
 
@@ -391,8 +363,7 @@ For example, we can create the following commutative 2-dimensional
 radical algebra of order 4 over the field of two elements, 
 and show that its adjoint group is a cyclic group of order 4:
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> x:=[ [ 0, 1, 0 ],
 >         [ 0, 0, 1 ],
 >         [ 0, 0, 0 ] ];;
@@ -406,8 +377,7 @@ gap> Size( R ) = Size( G );
 true
 gap> StructureDescription( G );
 "C4"
-]]>
-</Example>
+]]></Example>
 
 In the following example we construct a non-commutative 
 3-dimensional radical algebra of order 8 over the field 
@@ -416,8 +386,7 @@ is the dihedral group of order 8:
 
 <Alt Only="LaTeX">\pagebreak</Alt>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> x:=[ [ 0, 1, 0 ],
 >         [ 0, 0, 0 ],     
 >         [ 0, 0, 0 ] ];;
@@ -434,8 +403,7 @@ gap> G := AdjointGroup( R );
 <group of size 8 with 2 generators>
 gap> StructureDescription( G );
 "D8"
-]]>
-</Example>
+]]></Example>
 
 If the ring <A>R</A> is not a radical algebra, 
 then &Circle; will use another approach. We will enumerate 
@@ -451,8 +419,7 @@ for this computation.
 In the following example we demonstrate how it works for rings, 
 generated by residue classes:
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> R := Ring( [ ZmodnZObj(2,8) ] );;
 gap> G := AdjointGroup( R );
 <group of size 4 with 2 generators>
@@ -462,8 +429,7 @@ gap> R := Ring( [ ZmodnZObj(2,256) ] );;
 gap> G := AdjointGroup( R );;
 gap> StructureDescription( G );
 "C64 x C2"
-]]>
-</Example>
+]]></Example>
 
 Due to the <Ref Attr="AdjointSemigroup" />, there is also another way to 
 compute the adjoint group of a ring <M>R</M> by means of the computation of its
@@ -471,8 +437,7 @@ adjoint semigroup <M>S(R)</M> and taking the Green's <M>H</M>-class of the
 multiplicative neutral element of <M>S(R)</M>. Let us repeat the last example
 in this way:
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> R := Ring( [ ZmodnZObj(2,256) ] );; 
 gap> S := AdjointSemigroup( R );
 <monoid with 128 generators>
@@ -482,8 +447,7 @@ gap> G:=AsGroup(H);
 <group of size 128 with 2 generators>
 gap> StructureDescription(G);
 "C64 x C2"
-]]>
-</Example>
+]]></Example>
 
 However, the conversion of the Green's <M>H</M>-class to the group may take
 some time which may vary dependently on the particular ring in question, and
@@ -493,8 +457,7 @@ this as as standard method. In the following example the method based on
 Green's <M>H</M>-class is much slower than an application of
 earlier described random approach (20s vs 10ms):
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> R := Ring( [ ZmodnZObj(2,256) ] );;
 gap> AdjointGroup(R);;
 gap> R := Ring( [ ZmodnZObj(2,256) ] );;
@@ -502,8 +465,7 @@ gap> S:=AdjointSemigroup(R);
 <monoid with 128 generators>
 gap> AsGroup(GreensHClassOfElement(S,One(S))); 
 <group of size 128 with 2 generators>
-]]>
-</Example>
+]]></Example>
   
 
 Finally, note that if <A>R</A> has a unity <M>1</M>, then the set <M>1+R^{ad}</M>, 
@@ -522,8 +484,7 @@ for <M>r</M> in <M>R</M> is an isomorphism from <M>R^*</M> onto
 
 We demonstrate this isomorphism using the following example. 
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> LoadPackage( "laguna", false );
 true
 gap> FG := GroupRing( GF(2), DihedralGroup(8) );
@@ -535,8 +496,7 @@ gap> IdGroup( G );
 gap> IdGroup( Units( FG ) );
 #I  LAGUNA package: Computing the unit group ...
 [ 128, 170 ]
-]]>
-</Example>
+]]></Example>
 
 Thus, dependently on the ring <C>R</C> in question, it might be possible 
 that you can compute much faster its unit group using <C>Units(R)</C> than
@@ -545,8 +505,7 @@ of computation of the adjoint group of the ring with one a warning message
 will be displayed:
 <P/>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> Size( AdjointGroup( GroupRing( GF(2), DihedralGroup(8) ) ) );
 
 WARNING: usage of AdjointGroup for associative ring <R> with one!!! 
@@ -561,8 +520,7 @@ In this case the adjoint group is isomorphic to the unit group
 Units(<R>), which possibly may be computed faster!!! 
 
 10
-]]>
-</Example>
+]]></Example>
 
 If <A>R</A> is infinite, an error message will appear,
 telling that &Circle; does not provide methods to deal
@@ -587,8 +545,7 @@ with infinite rings.
 It has 2 levels: 0 (default) and 1. To change info level to 
 <C>k</C>, use command <C>SetInfoLevel(InfoCircle, k)</C>. 
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> SetInfoLevel( InfoCircle, 1 );
 gap> SetInfoLevel(InfoCircle,1);
 gap> R := Ring( [ ZmodnZObj(2,8) ]);;
@@ -597,8 +554,7 @@ gap> G := AdjointGroup( R );
 #I  Circle : searching generators for adjoint group ...
 <group of size 4 with 2 generators>
 gap> SetInfoLevel( InfoCircle, 0 );
-]]>
-</Example>
+]]></Example>
 
 </Description>
 </ManSection>
