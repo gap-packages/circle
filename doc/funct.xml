@@ -491,11 +491,9 @@ gap> FG := GroupRing( GF(2), DihedralGroup(8) );
 <algebra-with-one over GF(2), with 3 generators>
 gap> R := AugmentationIdeal( FG );;
 gap> G := AdjointGroup( R );;
-gap> IdGroup( G );
-[ 128, 170 ]
-gap> IdGroup( Units( FG ) );
+gap> IsomorphismGroups( G, Units( FG ) ) <> fail;
 #I  LAGUNA package: Computing the unit group ...
-[ 128, 170 ]
+true
 ]]></Example>
 
 Thus, dependently on the ring <C>R</C> in question, it might be possible 
