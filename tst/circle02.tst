@@ -181,20 +181,18 @@ gap> S:=AdjointSemigroup(R);
 gap> AsGroup(GreensHClassOfElement(S,One(S))); 
 <group of size 128 with 2 generators>
 
-# doc/funct.xml:487-499
+# doc/funct.xml:487-497
 gap> LoadPackage( "laguna", false );
 true
 gap> FG := GroupRing( GF(2), DihedralGroup(8) );
 <algebra-with-one over GF(2), with 3 generators>
 gap> R := AugmentationIdeal( FG );;
 gap> G := AdjointGroup( R );;
-gap> IdGroup( G );
-[ 128, 170 ]
-gap> IdGroup( Units( FG ) );
+gap> IsomorphismGroups( G, Units( FG ) ) <> fail;
 #I  LAGUNA package: Computing the unit group ...
-[ 128, 170 ]
+true
 
-# doc/funct.xml:508-523
+# doc/funct.xml:506-521
 gap> Size( AdjointGroup( GroupRing( GF(2), DihedralGroup(8) ) ) );
 
 WARNING: usage of AdjointGroup for associative ring <R> with one!!! 
@@ -210,7 +208,7 @@ Units(<R>), which possibly may be computed faster!!!
 
 10
 
-# doc/funct.xml:548-557
+# doc/funct.xml:546-555
 gap> SetInfoLevel( InfoCircle, 1 );
 gap> SetInfoLevel(InfoCircle,1);
 gap> R := Ring( [ ZmodnZObj(2,8) ]);;
