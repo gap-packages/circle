@@ -9,8 +9,8 @@ SetPackageInfo( rec(
 
 PackageName := "Circle",
 Subtitle := "Adjoint groups of finite rings",
-Version := "1.6.6",
-Date := "25/02/2023", # dd/mm/yyyy format
+Version := "1.7.0",
+Date := "11/08/2026", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 
 SourceRepository := rec(
