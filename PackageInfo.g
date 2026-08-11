@@ -76,6 +76,11 @@ Dependencies := rec(
   GAP := ">=4.8",
   NeededOtherPackages := [],
   SuggestedOtherPackages := [],
+  # An example in the manual applies IsomorphismGroups to the adjoint group of
+  # an augmentation ideal. Without SmallGrp that runs into an infinite mutual
+  # recursion between ElementaryAbelianSeries and PcgsElementaryAbelianSeries;
+  # with SmallGrp, IsomorphismGroups takes a shortcut via IdGroup and avoids it.
+  TestPackages := [ [ "smallgrp", ">= 1.0" ] ],
   ExternalConditions := []
 ),
 
