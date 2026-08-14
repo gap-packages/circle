@@ -1,103 +1,109 @@
 #############################################################################
-##  
-##  Demo PackageInfo.g for the GitHubPagesForGAP
 ##
+#W  PackageInfo.g           The CIRCLE package             Olexandr Konovalov
+##                                                          Panagiotis Soules
+##
+#############################################################################
 
 SetPackageInfo( rec(
 
-PackageName := "GitHubPagesForGAP",
+PackageName := "Circle",
+Subtitle := "Adjoint groups of finite rings",
+Version := "1.7.1",
+Date := "14/08/2026", # dd/mm/yyyy format
+License := "GPL-2.0-or-later",
 
-Subtitle := "A GitHub Pages generator for GAP packages",
-Version := "0.4",
-Date := "10/04/2025", # dd/mm/yyyy format
-License := "0BSD",
+SourceRepository := rec(
+    Type := "git",
+    URL := Concatenation( "https://github.com/gap-packages/", LowercaseString(~.PackageName) ),
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+PackageWWWHome  := Concatenation( "https://gap-packages.github.io/", LowercaseString(~.PackageName) ),
+README_URL      := Concatenation( ~.PackageWWWHome, "/README.md" ),
+PackageInfoURL  := Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
+ArchiveURL      := Concatenation( ~.SourceRepository.URL,
+                                 "/releases/download/v", ~.Version,
+                                 "/", LowercaseString(~.PackageName), "-", ~.Version ),
+                                 
+ArchiveFormats := ".tar.gz",
 
 Persons := [
   rec(
-    LastName      := "Horn",
-    FirstNames    := "Max",
+    LastName      := "Konovalov",
+    FirstNames    := "Olexandr",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "mhorn@rptu.de",
-    WWWHome       := "https://www.quendi.de/math",
-    GitHubUsername:= "fingolfin",
-    PostalAddress := Concatenation(
-                       "Fachbereich Mathematik\n",
-                       "RPTU Kaiserslautern-Landau\n",
-                       "Gottlieb-Daimler-Straße 48\n",
-                       "67663 Kaiserslautern\n",
-                       "Germany" ),
-    Place         := "Kaiserslautern, Germany",
-    Institution   := "RPTU Kaiserslautern-Landau"
-  ),
-
+    Email         := "obk1@st-andrews.ac.uk",
+    WWWHome       := "https://olexandr-konovalov.github.io/",
+    PostalAddress := Concatenation( [
+                     "School of Computer Science\n",
+                     "University of St Andrews\n",
+                     "Jack Cole Building, North Haugh,\n",
+                     "St Andrews, Fife, KY16 9SX, Scotland" ] ),
+    Place         := "St Andrews",
+    Institution   := "University of St Andrews"
+     ),
   rec(
-    LastName      := "Thor",
-    FirstNames    := "A. U.",
-    IsAuthor      := true,
-    IsMaintainer  := false,
-    #Email         := "author@example.com",
-  ),
-
-  rec(
-    LastName      := "Itor",
-    FirstNames    := "Jan",
-    IsAuthor      := false,
-    IsMaintainer  := true,
-    #Email         := "janitor@example.com",
-  ),
+    LastName := "Soules",
+    FirstNames := "Panagiotis",
+    IsAuthor := true,
+    IsMaintainer := false,
+    Email := "psoules@math.uoa.gr",
+    PostalAddress := Concatenation( [
+                     "Panepistimioupolis\n",
+                     "GR-15784, Athens, Greece" ] ),
+    Place         := "Athens",
+    Institution   := "National and Capodistrian University of Athens"              
+     )
 ],
 
-Status := "other",
+Status := "accepted",
+CommunicatedBy := "Leonard Soicher (QMUL)",
+AcceptDate := "01/2008",
 
-# The following are not strictly necessary in your own PackageInfo.g
-# (in the sense that update.g only looks at the usual fields
-# like PackageWWWHome, ArchiveURL etc.). But they are convenient
-# if you use exactly the scheme for your package website that we propose.
-GithubUser := "gap-system",
-GithubRepository := ~.PackageName,
-GithubWWW := Concatenation("https://github.com/", ~.GithubUser, "/", ~.GithubRepository),
-
-PackageWWWHome := Concatenation("https://", ~.GithubUser, ".github.io/", ~.GithubRepository, "/"),
-README_URL     := Concatenation( ~.PackageWWWHome, "README.md" ),
-PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-# The following assumes you are using the Github releases system. If not, adjust
-# it accordingly.
-ArchiveURL     := Concatenation(~.GithubWWW,
-                    "/releases/download/v", ~.Version, "/",
-                    ~.GithubRepository, "-", ~.Version),
-
-ArchiveFormats := ".tar.gz .tar.bz2",
-
-AbstractHTML := 
-  "This is a pseudo package that contains no actual\
-  <span class=\"pkgname\">GAP</span> code. Instead, it is a template for other\
-  GAP packages that allows to quickly setup GitHub Pages.",
-
+AbstractHTML := "The <span class=\"pkgname\">Circle</span> package provides functionality for computations in adjoint groups of finite associative rings. It allows to construct circle objects that will respect the circle multiplication r*s=r+s+rs, create multiplicative groups, generated by such objects, and compute groups of elements, invertible with respect to this operation. Also it may serve as an example of extending the GAP system with new multiplicative objects.",
+                  
 PackageDoc := rec(
-  BookName  := "GitHubPagesForGAP",
+  BookName := "Circle",
   ArchiveURLSubset := ["doc"],
-  HTMLStart := "doc/chap0.html",
-  PDFFile   := "doc/manual.pdf",
-  SixFile   := "doc/manual.six",
-  LongTitle := "A GitHub Pages generator for GAP packages",
+  HTMLStart := "doc/chap0_mj.html",
+  PDFFile := "doc/manual.pdf",
+  SixFile := "doc/manual.six",
+  LongTitle := "Adjoint groups of finite rings",
 ),
 
-# The following dependencies are fake and for testing / demo purposes
 Dependencies := rec(
-  GAP := ">=4.8.1",
-  NeededOtherPackages := [
-    ["GAPDoc", ">= 1.2"],
-    ["IO", ">= 4.1"],
-  ],
-  SuggestedOtherPackages := [["orb", ">= 4.2"]],
+  GAP := ">=4.8",
+  NeededOtherPackages := [],
+  SuggestedOtherPackages := [],
+  # An example in the manual applies IsomorphismGroups to the adjoint group of
+  # an augmentation ideal. Without SmallGrp that runs into an infinite mutual
+  # recursion between ElementaryAbelianSeries and PcgsElementaryAbelianSeries;
+  # with SmallGrp, IsomorphismGroups takes a shortcut via IdGroup and avoids it.
+  TestPackages := [ [ "smallgrp", ">= 1.0" ] ],
   ExternalConditions := []
 ),
 
 AvailabilityTest := ReturnTrue,
+TestFile := "tst/testall.g",
 
-Keywords := ["GitHub Pages", "GAP"]
+Keywords := ["circle multiplication", "star multiplication",
+             "adjoint semigroup", "adjoint group", "radical algebra"],
+
+AutoDoc := rec(
+    entities := rec(
+        VERSION := ~.Version,
+        RELEASEYEAR := ~.Date{[7..10]},
+        RELEASEDATE := function(date)
+          local day, month, year, allMonths;
+          day := Int(date{[1,2]});
+          month := Int(date{[4,5]});
+          year := Int(date{[7..10]});
+          allMonths := [ "January", "February", "March", "April", "May", "June", "July",
+                         "August", "September", "October", "November", "December"];
+          return Concatenation(String(day)," ", allMonths[month], " ", String(year));
+        end(~.Date),
+    ),
+),
 
 ));
-
-
